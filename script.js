@@ -8,6 +8,30 @@ const navLinks = document.querySelector('.nav-links');
 navToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
 navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
 
+// SKILL PREVIEW (image flottante au survol)
+const skillPreview = document.getElementById('skillPreview');
+const skillPreviewImg = document.getElementById('skillPreviewImg');
+
+if (skillPreview) {
+    const skillCards = document.querySelectorAll('.skill-card[data-preview]');
+
+    skillCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            skillPreviewImg.src = card.dataset.preview;
+            skillPreview.classList.add('active');
+        });
+
+        card.addEventListener('mouseleave', () => {
+            skillPreview.classList.remove('active');
+        });
+
+        card.addEventListener('mousemove', (e) => {
+            skillPreview.style.left = (e.clientX + 20) + 'px';
+            skillPreview.style.top = (e.clientY - 100) + 'px';
+        });
+    });
+}
+
 // ACCORDION
 const accordionItems = document.querySelectorAll('.accordion-item');
 accordionItems.forEach(item => {
