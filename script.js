@@ -32,8 +32,8 @@ projectCards.forEach(card => {
         const img = card.querySelector('.project-image img');
         const tag = info.querySelector('.project-tag');
 
-        if (img) { modalImg.src = img.src; modalImg.alt = img.alt; modalImg.style.display = 'block'; }
-        else { modalImg.style.display = 'none'; }
+        if (img && img.naturalWidth > 0) { modalImg.src = img.src; modalImg.alt = img.alt; modalImg.style.display = 'block'; modalImg.parentElement.style.display = 'flex'; }
+        else { modalImg.style.display = 'none'; modalImg.parentElement.style.display = 'none'; }
 
         modalTag.textContent = tag.textContent;
         modalTag.className = 'modal-tag';
@@ -85,7 +85,5 @@ statNumbers.forEach(num => counterObserver.observe(num));
 
 // SMOOTH LOAD
 window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    requestAnimationFrame(() => { document.body.style.opacity = '1'; });
+    document.body.classList.add('loaded');
 });
