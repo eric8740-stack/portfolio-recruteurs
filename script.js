@@ -8,6 +8,15 @@ const navLinks = document.querySelector('.nav-links');
 navToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
 navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
 
+// ACCORDION
+const accordionItems = document.querySelectorAll('.accordion-item');
+accordionItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        accordionItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
+
 // MODAL
 const modal = document.getElementById('projectModal');
 const modalImg = document.getElementById('modalImg');
