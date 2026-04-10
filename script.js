@@ -116,6 +116,7 @@ function loadRating() {
         document.getElementById('ratingAvg').textContent = data.moyenne || '-';
         document.getElementById('ratingCount').textContent = '(' + data.total + ' avis)';
         var navRating = document.getElementById('navRating'); if (navRating) navRating.textContent = data.moyenne || '-';
+        if (!hasVoted && data.moyenne > 0) { document.querySelectorAll('.star').forEach(s => { s.classList.toggle('active', parseInt(s.dataset.value) <= Math.round(data.moyenne)); }); }
     }).catch(() => {});
 }
 
