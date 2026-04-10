@@ -116,6 +116,8 @@ function loadRating() {
         document.getElementById('ratingAvg').textContent = data.moyenne || '-';
         document.getElementById('ratingCount').textContent = '(' + data.total + ' avis)';
         var navRating = document.getElementById('navRating'); if (navRating) navRating.textContent = data.moyenne || '-';
+        var navStars = document.getElementById('navStars');
+        if (navStars && data.moyenne > 0) { var filled = Math.round(data.moyenne); navStars.innerHTML = ''; for (var i = 1; i <= 5; i++) { navStars.innerHTML += '<span style="color:' + (i <= filled ? '#f59e0b' : '#4a5a4a') + '">&#9733;</span>'; } }
         if (!hasVoted && data.moyenne > 0) { document.querySelectorAll('.star').forEach(s => { s.classList.toggle('active', parseInt(s.dataset.value) <= Math.round(data.moyenne)); }); }
     }).catch(() => {});
 }
