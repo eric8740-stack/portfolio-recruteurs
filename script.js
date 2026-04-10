@@ -141,6 +141,7 @@ stars.forEach(star => {
     });
 });
 loadRating();
+setTimeout(loadRating, 3000);
 
 // SMOOTH LOAD
 window.addEventListener('load', () => {
