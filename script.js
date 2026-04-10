@@ -108,7 +108,7 @@ const counterObserver = new IntersectionObserver((entries) => {
 statNumbers.forEach(num => counterObserver.observe(num));
 
 // RATING
-const RATING_API = 'https://script.google.com/macros/s/AKfycbzpOta4QQ1rhijm5v1zt6hMv5NVhbzM1iLrgZlVK4ay2iMyheYQ0lSNbAbW44OHfU0/exec';
+const RATING_API = 'https://script.google.com/macros/s/AKfycbzmMe6-52tutPDea7KSOmTg7EvkCJcXkEouqy5qP5m4LzoaSbKz2Bf8McFi-45sHf8/exec';
 
 function loadRating() {
     fetch(RATING_API, { redirect: 'follow' }).then(r => r.text()).then(text => {
