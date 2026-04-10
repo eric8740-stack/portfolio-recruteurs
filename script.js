@@ -111,7 +111,8 @@ statNumbers.forEach(num => counterObserver.observe(num));
 const RATING_API = 'https://script.google.com/macros/s/AKfycbzpOta4QQ1rhijm5v1zt6hMv5NVhbzM1iLrgZlVK4ay2iMyheYQ0lSNbAbW44OHfU0/exec';
 
 function loadRating() {
-    fetch(RATING_API).then(r => r.json()).then(data => {
+    fetch(RATING_API, { redirect: 'follow' }).then(r => r.text()).then(text => {
+        var data = JSON.parse(text);
         document.getElementById('ratingAvg').textContent = data.moyenne || '-';
         document.getElementById('ratingCount').textContent = '(' + data.total + ' avis)';
     }).catch(() => {});
@@ -133,8 +134,8 @@ stars.forEach(star => {
         const note = parseInt(star.dataset.value);
         stars.forEach(s => { s.classList.add('voted'); s.classList.toggle('active', parseInt(s.dataset.value) <= note); });
         const msg = document.getElementById('ratingMessage'); if (msg) msg.textContent = 'Envoi en cours...';
-        fetch(RATING_API, { method: 'POST', body: JSON.stringify({ note: note }) })
-        .then(r => r.json()).then(() => { if (msg) msg.textContent = 'Merci pour votre avis !'; localStorage.setItem('portfolio_voted', note); hasVoted = note; loadRating(); })
+        fetch(RATING_API, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify({ note: note }) })
+        .then(() => { if (msg) msg.textContent = 'Merci pour votre avis !'; localStorage.setItem('portfolio_voted', note); hasVoted = note; loadRating(); })
         .catch(() => { if (msg) msg.textContent = 'Erreur, réessayez plus tard.'; });
     });
 });
