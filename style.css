@@ -272,3 +272,21 @@ img{max-width:100%;display:block}
     .footer-content{flex-direction:column;gap:0.5rem;text-align:center}
     .impact-grid{grid-template-columns:repeat(2,1fr)}
 }
+
+/* RECOMMANDATIONS */
+.reco-intro{color:var(--text-secondary);max-width:720px;margin:0 auto 2.5rem;text-align:center;font-size:0.95rem;line-height:1.6}
+.reco-card{max-width:960px;margin:0 auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:2.5rem;position:relative;overflow:hidden;transition:var(--transition)}
+.reco-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gradient)}
+.reco-card:hover{border-color:rgba(34,197,94,0.3);box-shadow:var(--shadow)}
+.reco-header{display:flex;align-items:center;gap:1.2rem;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+.reco-avatar{flex:0 0 auto;width:56px;height:56px;border-radius:50%;background:var(--gradient);color:#0a0f0a;font-weight:800;font-size:1.1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(34,197,94,0.3)}
+.reco-ident h3{font-size:1.15rem;font-weight:700;color:var(--text-primary);margin-bottom:0.2rem}
+.reco-role{font-size:0.9rem;color:var(--text-secondary);margin-bottom:0.15rem}
+.reco-context{font-size:0.8rem;color:var(--text-muted)}
+.reco-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
+.reco-quote{background:rgba(34,197,94,0.03);border:1px solid var(--border);border-left:3px solid var(--accent-1);border-radius:var(--radius-sm);padding:1.3rem 1.3rem 1.3rem 1.5rem;position:relative;font-style:italic;font-size:0.95rem;line-height:1.65;color:var(--text-secondary)}
+.reco-mark{position:absolute;top:-0.3rem;left:0.8rem;font-family:Georgia,'Times New Roman',serif;font-size:2.6rem;line-height:1;color:var(--accent-1);font-style:normal}
+.reco-footer{display:flex;justify-content:center}
+.reco-footer .btn{min-height:44px}
+@media(max-width:1023px){.reco-quotes{grid-template-columns:1fr}}
+@media(max-width:768px){.reco-card{padding:1.8rem 1.3rem}.reco-header{flex-direction:column;text-align:center;gap:0.8rem}.reco-avatar{width:52px;height:52px}.reco-quote{padding:1.1rem 1.1rem 1.1rem 1.3rem;font-size:0.9rem}}
