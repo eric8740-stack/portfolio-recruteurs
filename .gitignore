@@ -1,1 +1,3 @@
 .claude/worktrees/
+*.bak
+*.bak_*
