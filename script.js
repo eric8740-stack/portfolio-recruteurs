@@ -96,10 +96,11 @@ const counterObserver = new IntersectionObserver((entries) => {
             const count = parseInt(target.dataset.count);
             let current = 0;
             const increment = count / 40;
+            const prefix = target.dataset.prefix || '';
             const timer = setInterval(() => {
                 current += increment;
-                if (current >= count) { target.textContent = count; clearInterval(timer); }
-                else { target.textContent = Math.floor(current); }
+                if (current >= count) { target.textContent = prefix + count; clearInterval(timer); }
+                else { target.textContent = prefix + Math.floor(current); }
             }, 37);
             counterObserver.unobserve(target);
         }
