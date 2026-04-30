@@ -54,15 +54,22 @@ projectCards.forEach(card => {
     card.addEventListener('click', () => {
         const info = card.querySelector('.project-info');
         const img = card.querySelector('.project-image img');
-        const tag = info.querySelector('.project-tag');
+        const tags = info.querySelectorAll('.project-tag');
 
         if (img && img.naturalWidth > 0) { modalImg.src = img.src; modalImg.alt = img.alt; modalImg.style.display = 'block'; modalImg.parentElement.style.display = 'flex'; }
         else { modalImg.style.display = 'none'; modalImg.parentElement.style.display = 'none'; }
 
-        modalTag.textContent = tag.textContent;
-        modalTag.className = 'modal-tag';
-        if (tag.classList.contains('tag-vba')) modalTag.classList.add('tag-vba');
-        if (tag.classList.contains('tag-ice')) modalTag.classList.add('tag-ice');
+        modalTag.className = '';
+        modalTag.textContent = '';
+        tags.forEach((t, i) => {
+            const span = document.createElement('span');
+            span.className = 'modal-tag';
+            if (t.classList.contains('tag-vba')) span.classList.add('tag-vba');
+            if (t.classList.contains('tag-ice')) span.classList.add('tag-ice');
+            span.textContent = t.textContent;
+            modalTag.appendChild(span);
+            if (i < tags.length - 1) modalTag.appendChild(document.createTextNode(' '));
+        });
 
         modalTitle.textContent = info.querySelector('h3').textContent;
         modalDesc.textContent = info.querySelector('p').textContent;
