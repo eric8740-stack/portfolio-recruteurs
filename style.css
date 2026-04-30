@@ -213,6 +213,8 @@ img{max-width:100%;display:block}
 .modal-image img{width:100%;height:100%;object-fit:contain;max-height:500px}
 .modal-content{padding:2rem}
 .modal-tag{display:inline-block;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--accent-1);background:rgba(34,197,94,0.1);padding:0.3rem 0.8rem;border-radius:50px;margin-bottom:1rem}
+.modal-tag.tag-vba{color:var(--accent-3);background:rgba(245,158,11,0.1)}
+.modal-tag.tag-ice{color:#06b6d4;background:rgba(6,182,212,0.1)}
 .modal-content h2{font-size:1.5rem;font-weight:700;margin-bottom:0.8rem}
 .modal-content p{color:var(--text-secondary);line-height:1.7;font-size:0.95rem}
 
