@@ -15,8 +15,21 @@ s'affiche avec le CSS périmé, et **la page apparaît cassée**. Constaté le 2
 `style.css` et `script.js` n'avaient aucun `?v=` alors que les CV en avaient un.
 
 ```bash
-grep -n "?v=" index.html          # tout doit porter la même date après une évolution
+grep -n "?v=" index.html          # tout doit porter la même valeur après une évolution
 ```
+
+Deux évolutions le même jour : suffixer d'une lettre (`20260826`, puis `20260826b`).
+
+## Thème : CLAIR par défaut
+
+Depuis le 26/08/2026, **tout visiteur arrive en clair**, quel que soit son réglage
+système : `prefers-color-scheme` n'est plus consulté pour le choix initial. Seul un
+choix explicite, mémorisé dans `localStorage.theme`, l'emporte.
+
+Conséquence sur le CSS, à ne pas inverser par mégarde : **le clair est défini sur
+`:root`**, le sombre est une surcharge `:root[data-theme="dark"]`. C'est ce qui
+garantit qu'aucun chemin ne produit de flash sombre — même script d'amorçage coupé.
+Le `<meta name="theme-color">` suit la couleur claire.
 
 ## Structure
 
