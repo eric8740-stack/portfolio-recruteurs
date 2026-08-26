@@ -4,7 +4,7 @@
     --bg-card: #1a251a;
     --text-primary: #f0f5f0;
     --text-secondary: #95a895;
-    --text-muted: #6b806b;
+    --text-muted: #8aa08a;
     --accent-1: #22c55e;
     --accent-2: #16a34a;
     --accent-3: #f59e0b;
@@ -357,3 +357,112 @@ img{max-width:100%;display:block}
         rgba(245,158,11,0.25) 0%,
         transparent 70%);
 }
+
+
+/* ============================================================
+   MODERNISATION 26/08/2026 — applications web, theme clair, a11y
+   ============================================================ */
+
+/* --- theme clair ------------------------------------------- */
+:root[data-theme="light"]{
+  --bg-primary:#f7faf7; --bg-secondary:#ffffff; --bg-card:#ffffff;
+  --text-primary:#0f1a0f; --text-secondary:#4a5c4a; --text-muted:#5d6f5d;
+  --accent-1:#15803d; --accent-2:#166534; --accent-3:#b45309;
+  --border:#d9e4d9; --shadow:0 4px 24px rgba(15,26,15,0.08);
+}
+:root[data-theme="light"] .navbar.scrolled{background:rgba(255,255,255,0.92)}
+:root[data-theme="light"] .nav-stars{color:#c2ccc2}
+:root[data-theme="light"] .hero-bg-grid{background-image:linear-gradient(rgba(21,128,61,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(21,128,61,0.05) 1px,transparent 1px)}
+:root[data-theme="light"] .btn-primary{color:#fff}
+:root[data-theme="light"] .app-shot-empty{background:#eef4ee}
+
+/* --- bascule de theme -------------------------------------- */
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;
+  border-radius:50%;border:1.5px solid var(--border);background:transparent;color:var(--text-secondary);
+  cursor:pointer;transition:var(--transition);padding:0}
+.theme-toggle:hover{border-color:var(--accent-1);color:var(--accent-1)}
+.theme-icon{width:16px;height:16px;border-radius:50%;border:2px solid currentColor;
+  background:linear-gradient(90deg,currentColor 50%,transparent 50%)}
+
+/* --- accessibilite : focus visibles ------------------------ */
+a:focus-visible,button:focus-visible,.project-card:focus-visible,.app-card:focus-visible{
+  outline:2px solid var(--accent-1);outline-offset:3px;border-radius:var(--radius-sm)}
+
+/* --- hero deux colonnes ------------------------------------ */
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:3.5rem;align-items:center}
+.hero-visual{position:relative}
+.browser-mock{display:block;border:1px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;background:var(--bg-card);box-shadow:0 18px 50px rgba(0,0,0,0.35);
+  transition:var(--transition)}
+.browser-mock:hover{transform:translateY(-4px);box-shadow:0 26px 60px rgba(0,0,0,0.45);border-color:var(--accent-1)}
+.browser-bar{display:flex;align-items:center;gap:0.4rem;padding:0.6rem 0.9rem;
+  background:var(--bg-secondary);border-bottom:1px solid var(--border)}
+.browser-dot{width:9px;height:9px;border-radius:50%;background:var(--border)}
+.browser-url{margin-left:0.8rem;font-size:0.72rem;color:var(--text-muted);
+  background:var(--bg-primary);border-radius:50px;padding:0.2rem 0.75rem;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.browser-mock img{width:100%;height:auto}
+.browser-cta{display:block;padding:0.6rem 0.9rem;font-size:0.78rem;font-weight:600;
+  color:var(--accent-1);background:var(--bg-secondary);border-top:1px solid var(--border)}
+
+/* --- cartes applications ----------------------------------- */
+.apps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-top:2.5rem}
+.app-card{display:flex;flex-direction:column;background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;transition:var(--transition)}
+.app-card:hover{transform:translateY(-4px);border-color:var(--accent-1);box-shadow:var(--shadow)}
+.app-shot{aspect-ratio:1200/750;overflow:hidden;background:var(--bg-secondary);border-bottom:1px solid var(--border)}
+.app-shot img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.app-shot-empty{display:flex;align-items:center;justify-content:center;color:var(--text-muted);background:#16211a}
+.app-shot-empty svg{width:64px;height:64px}
+.app-body{padding:1.4rem;display:flex;flex-direction:column;gap:0.7rem;flex:1}
+.app-body h3{font-size:1.12rem;font-weight:700}
+.app-body p{font-size:0.9rem;color:var(--text-secondary);line-height:1.65}
+.app-tags{margin-top:auto}
+.app-demo{align-self:flex-start;font-size:0.85rem;font-weight:600;color:var(--accent-1);
+  border-bottom:1px solid transparent;transition:var(--transition)}
+.app-demo:hover{border-bottom-color:var(--accent-1)}
+.app-demo-off{color:var(--text-muted);font-weight:500;cursor:default}
+
+/* --- bloc methode ------------------------------------------ */
+.methode-title{margin:4rem 0 0.4rem;font-size:1.5rem;font-weight:700;text-align:center}
+.methode-grid{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:1.2rem;margin-top:1.8rem;counter-reset:none}
+.methode-step{position:relative;background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:1.4rem;transition:var(--transition)}
+.methode-step:hover{border-color:var(--accent-1)}
+.methode-num{display:inline-block;font-size:0.78rem;font-weight:800;letter-spacing:0.1em;
+  color:var(--accent-1);margin-bottom:0.5rem}
+.methode-step h4{font-size:1rem;font-weight:700;margin-bottom:0.4rem}
+.methode-step p{font-size:0.87rem;color:var(--text-secondary);line-height:1.6}
+
+/* --- filtres projets --------------------------------------- */
+.proj-filters{display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin:2.5rem 0 1rem}
+.proj-filter{font-family:inherit;font-size:0.85rem;font-weight:600;padding:0.45rem 1.1rem;
+  border-radius:50px;border:1.5px solid var(--border);background:transparent;
+  color:var(--text-secondary);cursor:pointer;transition:var(--transition)}
+.proj-filter:hover{border-color:var(--accent-1);color:var(--accent-1)}
+.proj-filter.is-active{background:var(--accent-1);border-color:var(--accent-1);color:#fff}
+.proj-hidden{display:none!important}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:2.5rem}
+  .hero-visual{order:2}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
+  .fade-in{opacity:1!important;transform:none!important}
+}
+
+/* --- corrections de mise en page 26/08 ---------------------- */
+.nav-container{max-width:1320px;gap:1.5rem}
+.nav-links{gap:1.15rem;flex-wrap:nowrap}
+.nav-links a{font-size:0.86rem;white-space:nowrap}
+.nav-cta{padding:0.45rem 0.95rem}
+.nav-rating{padding:0.3rem 0.6rem;font-size:0.78rem}
+.theme-toggle{width:32px;height:32px;flex:0 0 auto}
+@media (max-width:1180px){
+  .nav-links{gap:0.85rem}
+  .nav-links a{font-size:0.8rem}
+}
+.app-shot-empty{aspect-ratio:auto;min-height:132px;padding:1.6rem 0}
+.app-shot-empty svg{width:52px;height:52px}

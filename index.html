@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Paysant — Imprimerie Flexo & Data Analyst | 28 ans d'expérience</title>
-    <meta name="description" content="28 ans d'imprimerie flexographique — conducteur, chef d'équipe, responsable d'atelier, référent technique sur ~100 appels d'offres par an, concepteur d'un simulateur d'aide au chiffrage (VBA). Compétence Business Intelligence en complément (Power BI, DAX, SQL, VBA). Témoignages de collaborateurs. Disponible immédiatement.">
-    <meta property="og:title" content="Eric Paysant — Imprimerie Flexo & Data Analyst">
-    <meta property="og:description" content="Imprimerie flexographique (28 ans) + Business Intelligence en complément. Référent technique AO, simulateur d'aide au chiffrage, Power BI, DAX, VBA. Disponible immédiatement — CDI / CDD.">
-    <meta property="og:image" content="https://eric8740-stack.github.io/portfolio-recruteurs/images/trame-rdd.jpg">
+    <title>Eric Paysant — Applications web & Data Analyst | 28 ans d'industrie</title>
+    <meta name="description" content="Je transforme les fichiers Excel critiques des entreprises en applications web fiables — de la base de données au déploiement. 28 ans d'industrie (imprimerie flexographique, responsable d'atelier) puis Data Analyst (Power BI, SQL, Python). Démos en ligne, données fictives.">
+    <meta property="og:title" content="Eric Paysant — Applications web & Data Analyst">
+    <meta property="og:description" content="Excel → application web : conception, développement, déploiement. Data Analyst (Power BI, SQL, Python) et 28 ans d'industrie. Démos publiques en ligne.">
+    <meta property="og:image" content="https://eric8740-stack.github.io/portfolio-recruteurs/images/app-treso.jpg">
     <meta property="og:url" content="https://eric8740-stack.github.io/portfolio-recruteurs/">
     <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0f0a'/%3E%3Ctext x='16' y='22' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='800' fill='%2322c55e' text-anchor='middle'%3EEP%3C/text%3E%3C/svg%3E">
+    <meta name="theme-color" content="#0a0f0a">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Eric Paysant",
+      "url": "https://eric8740-stack.github.io/portfolio-recruteurs/",
+      "jobTitle": "Data Analyst & développeur d'applications de gestion",
+      "description": "Transforme les fichiers Excel métier en applications web fiables. 28 ans d'industrie puis data analytics.",
+      "email": "eric.paysant@outlook.fr",
+      "telephone": "+33621849054",
+      "address": {"@type": "PostalAddress", "addressLocality": "Condat-sur-Vienne", "addressRegion": "Haute-Vienne", "addressCountry": "FR"},
+      "sameAs": ["https://www.linkedin.com/in/ericpaysant", "https://ericpaysant.fr"],
+      "knowsAbout": ["Power BI", "DAX", "SQL", "PostgreSQL", "Python", "FastAPI", "Next.js", "Excel VBA", "Flexographie", "ERP"]
+    }
+    </script>
+    <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    })();
+    </script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,12 +49,14 @@
             <a href="#accueil" class="nav-logo">EP<span class="dot">.</span></a>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#applications">Applications</a></li>
                 <li><a href="#parcours">Expériences</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#realisations">Réalisations</a></li>
                 <li><a href="#recommandations">Recommandations</a></li>
                 <li><a href="#avis" class="nav-rating"><span class="nav-stars" id="navStars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span id="navRating">-</span>/5</a></li>
                 <li><a href="#contact" class="nav-cta">Me proposer un poste</a></li>
+                <li><button type="button" class="theme-toggle" id="themeToggle" aria-label="Basculer clair / sombre" title="Basculer clair / sombre"><span aria-hidden="true" class="theme-icon"></span></button></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Menu">
                 <span></span><span></span><span></span>
@@ -39,20 +68,34 @@
     <section class="hero" id="accueil">
         <div class="hero-bg-grid"></div>
         <div class="hero-content">
-            <p class="hero-tag">Disponible immédiatement — CDI / CDD</p>
-            <h1 class="hero-title">
-                Eric <span class="gradient-text">Paysant</span>
-            </h1>
-            <h2 class="hero-role">Imprimerie Flexo · Aide au chiffrage AO · Data Analyst</h2>
-            <p class="hero-subtitle">
-                28 ans d'imprimerie flexographique — de conducteur à responsable d'atelier, référent technique AO et concepteur du simulateur d'aide au chiffrage.<br>
-                Aujourd'hui, je pilote aussi la performance industrielle par la donnée.
-            </p>
-            <div class="hero-actions">
-                <a href="#parcours" class="btn btn-primary">Voir mon parcours</a>
-                <a href="CV_Eric_Paysant_Imprimerie.pdf?v=20260422" target="_blank" class="btn btn-outline">CV Imprimerie (PDF)</a>
-                <a href="CV_Eric_Paysant.pdf?v=20260422" target="_blank" class="btn btn-outline">CV Data (PDF)</a>
-                <a href="#contact" class="btn btn-outline">Me proposer un poste</a>
+            <div class="hero-grid">
+              <div class="hero-copy">
+                <p class="hero-tag">En poste jusqu'au 18/09/2026 — ouvert CDI / CDD</p>
+                <h1 class="hero-title">
+                    Eric <span class="gradient-text">Paysant</span>
+                </h1>
+                <h2 class="hero-role">Applications web sur mesure · Data Analyst · Industrie</h2>
+                <p class="hero-subtitle">
+                    J'ai passé 28 ans <strong>dans</strong> les fichiers Excel des entreprises — imprimerie flexographique, responsable d'atelier, puis data analyst sur deux ERP.<br>
+                    Aujourd'hui je les remplace par des applications web complètes, de la base de données au déploiement.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://tresorerie.apppreview.fr" target="_blank" rel="noopener" class="btn btn-primary">Voir une démo en ligne</a>
+                    <a href="#applications" class="btn btn-outline">Mes applications</a>
+                    <a href="CV_Eric_Paysant.pdf?v=20260422" target="_blank" class="btn btn-outline">CV Data (PDF)</a>
+                    <a href="CV_Eric_Paysant_Imprimerie.pdf?v=20260422" target="_blank" class="btn btn-outline">CV Imprimerie (PDF)</a>
+                </div>
+              </div>
+              <div class="hero-visual">
+                <a class="browser-mock" href="https://tresorerie.apppreview.fr" target="_blank" rel="noopener" aria-label="Ouvrir la démo publique de l'application de suivi de trésorerie">
+                    <div class="browser-bar">
+                        <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                        <span class="browser-url">tresorerie.apppreview.fr</span>
+                    </div>
+                    <picture><source srcset="images/app-treso.webp" type="image/webp"><img src="images/app-treso.jpg" width="1200" height="750" alt="Tableau de bord de l'application de suivi de trésorerie, démo publique à données fictives"></picture>
+                    <span class="browser-cta">Démo publique · données 100 % fictives ↗</span>
+                </a>
+              </div>
             </div>
             <div class="hero-stats">
                 <div class="stat">
@@ -79,12 +122,36 @@
         </div>
     </section>
 
+
+    <!-- Applications web -->
+    <section class="section section-dark" id="applications">
+        <div class="container">
+            <h2 class="section-title">Applications web</h2>
+            <p class="section-subtitle">Conçues, développées et déployées — deux démos publiques en ligne</p>
+            <div class="apps-grid">
+                <article class="app-card"><div class="app-shot"><picture><source srcset="images/app-treso.webp" type="image/webp"><img loading="lazy" src="images/app-treso.jpg" width="1200" height="750" alt="Capture de l'application Suivi de trésorerie (démo, données fictives)"></picture></div><div class="app-body"><h3>Suivi de trésorerie</h3><p>Remplacement d'un classeur Excel de 20 ans (4 onglets, ~10 000 cellules) par une application multi-utilisateur : saisies guidées, indicateurs recalculés, export, sauvegarde en un clic. Les résultats sont prouvés identiques à l'Excel d'origine par 123 tests automatisés.</p><ul class="skill-tags app-tags"><li>FastAPI</li><li>SQLite</li><li>Next.js</li><li>Serveur Linux</li><li>Package Windows</li></ul><a class="app-demo" href="https://tresorerie.apppreview.fr" target="_blank" rel="noopener">Voir la démo <span aria-hidden="true">↗</span></a></div></article>
+                <article class="app-card"><div class="app-shot"><picture><source srcset="images/app-pilotage.webp" type="image/webp"><img loading="lazy" src="images/app-pilotage.jpg" width="1200" height="750" alt="Capture de l'application Pilotage d'activité industrielle (démo, données fictives)"></picture></div><div class="app-body"><h3>Pilotage d'activité industrielle</h3><p>Classeur de pilotage porté vers le web : chiffre d'affaires, carnet de commandes, charge de travail par centre, retards de livraison, marges. Livré en package autonome installé par le client sur son propre serveur — aucune donnée ne sort de chez lui.</p><ul class="skill-tags app-tags"><li>FastAPI</li><li>Next.js</li><li>Package Windows</li><li>Installation client</li></ul><a class="app-demo" href="https://demo.apppreview.fr" target="_blank" rel="noopener">Voir la démo <span aria-hidden="true">↗</span></a></div></article>
+                <article class="app-card"><div class="app-shot app-shot-empty" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><circle cx="5" cy="6.5" r="0.6" fill="currentColor"/><circle cx="7.4" cy="6.5" r="0.6" fill="currentColor"/><path d="M7 14h4M7 17h9M15 12v5"/></svg></div><div class="app-body"><h3>Espace Pro — gestion commerciale</h3><p>Devis et factures PDF, numérotation automatique, suivi des paiements et relances, bilan annuel, déclarations, formulaires clients publics. 100 % statique, sans serveur ni abonnement.</p><ul class="skill-tags app-tags"><li>HTML/CSS/JS</li><li>Apps Script</li><li>Airtable</li><li>GitHub Pages</li></ul><a class="app-demo" href="https://eric8740-stack.github.io/erp-conseil-app/" target="_blank" rel="noopener">Ouvrir l'application <span aria-hidden="true">↗</span></a></div></article>
+                <article class="app-card"><div class="app-shot app-shot-empty" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><circle cx="5" cy="6.5" r="0.6" fill="currentColor"/><circle cx="7.4" cy="6.5" r="0.6" fill="currentColor"/><path d="M7 14h4M7 17h9M15 12v5"/></svg></div><div class="app-body"><h3>FlexoSuite — devis flexographie</h3><p>Application de chiffrage pour imprimeurs flexo : catalogue d'outils, recherche de format approchant, calcul de devis. Conçue et développée de zéro à partir de 28 ans de métier — l'imprimeur calcule avec ses propres tarifs.</p><ul class="skill-tags app-tags"><li>FastAPI</li><li>SQLModel</li><li>Next.js</li><li>Package Windows</li></ul><span class="app-demo app-demo-off">Livrée chez le client — pas de démo publique</span></div></article>
+                <article class="app-card"><div class="app-shot app-shot-empty" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><circle cx="5" cy="6.5" r="0.6" fill="currentColor"/><circle cx="7.4" cy="6.5" r="0.6" fill="currentColor"/><path d="M7 14h4M7 17h9M15 12v5"/></svg></div><div class="app-body"><h3>Rentabilité réelle par commande</h3><p>Portage d'un moteur de calcul VBA vers le web : dépôt d'un export ERP, calcul de la rentabilité réelle, tableaux de bord et historique des imports. Aucune dépendance ODBC côté serveur.</p><ul class="skill-tags app-tags"><li>FastAPI</li><li>PostgreSQL</li><li>TypeScript</li><li>Railway</li><li>CI</li></ul><span class="app-demo app-demo-off">Livrée chez le client — pas de démo publique</span></div></article>
+            </div>
+
+            <h3 class="methode-title">Ma méthode</h3>
+            <ol class="methode-grid">
+                <li class="methode-step"><span class="methode-num">01</span><h4>J'audite votre fichier</h4><p>Je lis les formules, les cas particuliers et les habitudes de saisie. Ce qui marche est conservé — c'est votre métier, pas le mien.</p></li>
+                <li class="methode-step"><span class="methode-num">02</span><h4>Je reconstruis en application</h4><p>Formulaires simples à la place des cellules fragiles, base de données, multi-utilisateur, accès à distance.</p></li>
+                <li class="methode-step"><span class="methode-num">03</span><h4>Je prouve l'égalité des résultats</h4><p>Des tests automatisés rejouent vos calculs : l'application doit retrouver les mêmes chiffres que l'Excel, au centime.</p></li>
+                <li class="methode-step"><span class="methode-num">04</span><h4>Je livre et je forme</h4><p>Installation sur votre serveur depuis une clé USB, notice pour votre technicien, sauvegarde en un clic. Aucune donnée ne sort de chez vous.</p></li>
+            </ol>
+        </div>
+    </section>
+
     <!-- Profil -->
     <section class="section section-dark" id="profil">
         <div class="container">
             <div class="profil-box">
                 <h2>Profil</h2>
-                <p>28 ans d'<strong>imprimerie flexographique</strong> chez ICE Étiquettes : parcours complet conducteur → chef d'équipe → responsable d'atelier, avec une expertise technique multi-casquettes — <strong>référent technique sur ~100 appels d'offres par an</strong>, arbitrage technico-économique machine/matière, colorimétrie, relation client, maintenance. En parallèle, <strong>digitalisation autonome du métier</strong> depuis 2001 : <strong>simulateur d'aide au chiffrage (VBA)</strong>, outil de gestion des encres (−30% pertes, validé par le PDG du groupe), reporting de production. Depuis 2024, <strong>compétence data en complément</strong> (Power BI, DAX, SQL, Python) avec mission chez A3D Design : systèmes décisionnels complets, ISO 9001, coûts de revient, trésorerie. <strong>Disponible immédiatement.</strong></p>
+                <p>28 ans d'<strong>imprimerie flexographique</strong> chez ICE Étiquettes : parcours complet conducteur → chef d'équipe → responsable d'atelier, avec une expertise technique multi-casquettes — <strong>référent technique sur ~100 appels d'offres par an</strong>, arbitrage technico-économique machine/matière, colorimétrie, relation client, maintenance. En parallèle, <strong>digitalisation autonome du métier</strong> depuis 2001 : <strong>simulateur d'aide au chiffrage (VBA)</strong>, outil de gestion des encres (−30% pertes, validé par le PDG du groupe), reporting de production. Depuis 2024, <strong>compétence data en complément</strong> (Power BI, DAX, SQL, Python) avec mission chez A3D Design : systèmes décisionnels complets, ISO 9001, coûts de revient. Depuis 2026, je conçois et déploie aussi des <strong>applications web de gestion</strong> — de la base de données au package installé chez le client. <strong>En poste jusqu'au 18/09/2026.</strong></p>
                 <div class="profil-details">
                     <span>Haute-Vienne & départements limitrophes</span>
                     <span>Télétravail possible</span>
@@ -246,7 +313,7 @@
             <p class="section-subtitle">Survolez pour explorer, cliquez pour voir le détail</p>
             <div class="accordion" id="accordion">
                 <a href="#realisations" class="accordion-item active" data-index="0">
-                    <img loading="lazy" src="images/trame-rdd.jpg" alt="ISO 9001">
+                    <picture><source srcset="images/trame-rdd.webp" type="image/webp"><img loading="lazy" src="images/trame-rdd.jpg" alt="ISO 9001"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-pbi">Power BI</span>
                     <span class="accordion-title-vertical">ISO 9001</span>
@@ -257,7 +324,7 @@
                     </div>
                 </a>
                 <a href="#realisations" class="accordion-item" data-index="1">
-                    <img loading="lazy" src="images/analyse-couts-production.jpg" alt="Coûts Production">
+                    <picture><source srcset="images/analyse-couts-production.webp" type="image/webp"><img loading="lazy" src="images/analyse-couts-production.jpg" alt="Coûts Production"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-pbi">Power BI</span>
                     <span class="accordion-title-vertical">Coûts Production</span>
@@ -268,7 +335,7 @@
                     </div>
                 </a>
                 <a href="#realisations" class="accordion-item" data-index="2">
-                    <img loading="lazy" src="images/vba-analyse-couts.jpg" alt="VBA Coûts">
+                    <picture><source srcset="images/vba-analyse-couts.webp" type="image/webp"><img loading="lazy" src="images/vba-analyse-couts.jpg" alt="VBA Coûts"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-acc-vba">Excel VBA</span>
                     <span class="accordion-title-vertical">VBA 13 modules</span>
@@ -279,7 +346,7 @@
                     </div>
                 </a>
                 <a href="#realisations" class="accordion-item" data-index="3">
-                    <img loading="lazy" src="images/ice-reporting.jpg" alt="Reporting ICE">
+                    <picture><source srcset="images/ice-reporting.webp" type="image/webp"><img loading="lazy" src="images/ice-reporting.jpg" alt="Reporting ICE"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-acc-ice">ICE Étiquettes</span>
                     <span class="accordion-title-vertical">Reporting</span>
@@ -290,7 +357,7 @@
                     </div>
                 </a>
                 <a href="#realisations" class="accordion-item" data-index="4">
-                    <img loading="lazy" src="images/ice-creation-outils.jpg" alt="Commande Outils">
+                    <picture><source srcset="images/ice-creation-outils.webp" type="image/webp"><img loading="lazy" src="images/ice-creation-outils.jpg" alt="Commande Outils"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-acc-ice">ICE Étiquettes</span>
                     <span class="accordion-title-vertical">Outils</span>
@@ -301,7 +368,7 @@
                     </div>
                 </a>
                 <a href="#realisations" class="accordion-item" data-index="5">
-                    <img loading="lazy" src="images/tresorerie.jpg" alt="Trésorerie">
+                    <picture><source srcset="images/tresorerie.webp" type="image/webp"><img loading="lazy" src="images/tresorerie.jpg" alt="Trésorerie"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-pbi">Power BI</span>
                     <span class="accordion-title-vertical">Trésorerie</span>
@@ -312,7 +379,7 @@
                     </div>
                 </a>
                 <a href="#realisations" class="accordion-item" data-index="6">
-                    <img loading="lazy" src="images/maintenance.jpg" alt="Maintenance">
+                    <picture><source srcset="images/maintenance.webp" type="image/webp"><img loading="lazy" src="images/maintenance.jpg" alt="Maintenance"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-pbi">Power BI</span>
                     <span class="accordion-title-vertical">Maintenance</span>
@@ -323,7 +390,7 @@
                     </div>
                 </a>
                 <a href="#realisations" class="accordion-item" data-index="7">
-                    <img loading="lazy" src="images/retards-livraison.jpg" alt="OTD">
+                    <picture><source srcset="images/retards-livraison.webp" type="image/webp"><img loading="lazy" src="images/retards-livraison.jpg" alt="OTD"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-pbi">Power BI</span>
                     <span class="accordion-title-vertical">OTD</span>
@@ -334,7 +401,7 @@
                     </div>
                 </a>
                 <a href="#realisations" class="accordion-item" data-index="8">
-                    <img loading="lazy" src="images/vba-tresorerie.jpg" alt="VBA Trésorerie">
+                    <picture><source srcset="images/vba-tresorerie.webp" type="image/webp"><img loading="lazy" src="images/vba-tresorerie.jpg" alt="VBA Trésorerie"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-acc-vba">Excel VBA</span>
                     <span class="accordion-title-vertical">VBA Tréso</span>
@@ -345,7 +412,7 @@
                     </div>
                 </a>
                 <a href="#realisations" class="accordion-item" data-index="9">
-                    <img loading="lazy" src="images/ice-temps-production.jpg" alt="Simulation">
+                    <picture><source srcset="images/ice-temps-production.webp" type="image/webp"><img loading="lazy" src="images/ice-temps-production.jpg" alt="Simulation"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-acc-ice">ICE Étiquettes</span>
                     <span class="accordion-title-vertical">Chiffrage AO</span>
@@ -356,7 +423,7 @@
                     </div>
                 </a>
                 <a href="#realisations" class="accordion-item" data-index="10">
-                    <img loading="lazy" src="images/ice-poids-sigwerk.jpg" alt="Encres">
+                    <picture><source srcset="images/ice-poids-sigwerk.webp" type="image/webp"><img loading="lazy" src="images/ice-poids-sigwerk.jpg" alt="Encres"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-acc-ice">ICE Étiquettes</span>
                     <span class="accordion-title-vertical">Encres</span>
@@ -367,7 +434,7 @@
                     </div>
                 </a>
                 <a href="#realisations" class="accordion-item" data-index="11">
-                    <img loading="lazy" src="images/ice-saisie-prod.jpg" alt="Pointeuse">
+                    <picture><source srcset="images/ice-saisie-prod.webp" type="image/webp"><img loading="lazy" src="images/ice-saisie-prod.jpg" alt="Pointeuse"></picture>
                     <div class="accordion-overlay"></div>
                     <span class="accordion-tag tag-acc-ice">ICE Étiquettes</span>
                     <span class="accordion-title-vertical">Pointeuse</span>
@@ -399,25 +466,32 @@
                 <div class="impact-card"><span class="impact-number">28 ans</span><p>Expertise flexographie</p></div>
             </div>
 
-            <h3 class="projects-subtitle">Power BI — A3D Design</h3>
+
+            <div class="proj-filters" role="group" aria-label="Filtrer les réalisations">
+                <button type="button" class="proj-filter is-active" data-filter="all">Tout</button>
+                <button type="button" class="proj-filter" data-filter="powerbi">Power BI</button>
+                <button type="button" class="proj-filter" data-filter="vba">Excel VBA</button>
+                <button type="button" class="proj-filter" data-filter="imprimerie">Imprimerie</button>
+            </div>
+            <h3 class="projects-subtitle" data-cat="powerbi">Power BI — A3D Design</h3>
             <div class="projects-grid">
-                <div class="project-card"><div class="project-image"><img loading="lazy" src="images/trame-rdd.jpg" alt="ISO 9001"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>ISO 9001 — Revue De Direction</h3><p>56 pages, ~400 mesures DAX, modèle sémantique 40 tables. 2 ERP via ODBC. Point critique → point fort audit.</p></div></div>
-                <div class="project-card"><div class="project-image"><img loading="lazy" src="images/analyse-couts-production.jpg" alt="Coûts Production"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Analyse des Coûts de Production</h3><p>6 pages connectées au moteur VBA. Rentabilité, écarts de coûts, charge de travail par centre.</p></div></div>
-                <div class="project-card"><div class="project-image"><img loading="lazy" src="images/tresorerie.jpg" alt="Trésorerie"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Trésorerie</h3><p>5 comptes bancaires, 24 périodes bi-mensuelles, flux financiers et prévisions.</p></div></div>
-                <div class="project-card"><div class="project-image"><img loading="lazy" src="images/maintenance.jpg" alt="Maintenance"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Maintenance</h3><p>Suivi équipements, interventions et planification préventive.</p></div></div>
-                <div class="project-card"><div class="project-image"><img loading="lazy" src="images/retards-livraison.jpg" alt="OTD"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Analyse OTD — Retards de Livraison</h3><p>6 pages, Pareto, causes, délais par chef de projet et performance par client.</p></div></div>
+                <div class="project-card"><div class="project-image"><picture><source srcset="images/trame-rdd.webp" type="image/webp"><img loading="lazy" src="images/trame-rdd.jpg" alt="ISO 9001"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>ISO 9001 — Revue De Direction</h3><p>56 pages, ~400 mesures DAX, modèle sémantique 40 tables. 2 ERP via ODBC. Point critique → point fort audit.</p></div></div>
+                <div class="project-card"><div class="project-image"><picture><source srcset="images/analyse-couts-production.webp" type="image/webp"><img loading="lazy" src="images/analyse-couts-production.jpg" alt="Coûts Production"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Analyse des Coûts de Production</h3><p>6 pages connectées au moteur VBA. Rentabilité, écarts de coûts, charge de travail par centre.</p></div></div>
+                <div class="project-card"><div class="project-image"><picture><source srcset="images/tresorerie.webp" type="image/webp"><img loading="lazy" src="images/tresorerie.jpg" alt="Trésorerie"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Trésorerie</h3><p>5 comptes bancaires, 24 périodes bi-mensuelles, flux financiers et prévisions.</p></div></div>
+                <div class="project-card"><div class="project-image"><picture><source srcset="images/maintenance.webp" type="image/webp"><img loading="lazy" src="images/maintenance.jpg" alt="Maintenance"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Maintenance</h3><p>Suivi équipements, interventions et planification préventive.</p></div></div>
+                <div class="project-card"><div class="project-image"><picture><source srcset="images/retards-livraison.webp" type="image/webp"><img loading="lazy" src="images/retards-livraison.jpg" alt="OTD"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Analyse OTD — Retards de Livraison</h3><p>6 pages, Pareto, causes, délais par chef de projet et performance par client.</p></div></div>
             </div>
 
-            <h3 class="projects-subtitle">Excel VBA — A3D Design</h3>
+            <h3 class="projects-subtitle" data-cat="vba">Excel VBA — A3D Design</h3>
             <div class="projects-grid">
-                <div class="project-card"><div class="project-image"><img loading="lazy" src="images/vba-analyse-couts.jpg" alt="VBA Coûts"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag tag-vba">Excel VBA</span> <span class="project-tag">Performance industrielle</span> <span class="project-tag">Pilotage rentabilité</span><h3>Analyse des Coûts de Production</h3><p>Moteur VBA en 13 modules pour le calcul du coût de revient réel : descente automatique dans 5 niveaux de nomenclature, ~40 centres de charge, 150-200 produits par mois. Calcul passé de 3-4 jours à quelques secondes. Écart entre devis et coût réel : &gt;10% → &lt;3%. Inclut un tableau de performance par deviseur avec 2 ans d'historique pour piloter les tendances.</p></div></div>
-                <div class="project-card"><div class="project-image"><img loading="lazy" src="images/vba-tresorerie.jpg" alt="VBA Trésorerie"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag tag-vba">Excel VBA</span><h3>Outil de Trésorerie</h3><p>Macros VBA, flux financiers, alimentation dashboard Power BI.</p></div></div>
+                <div class="project-card"><div class="project-image"><picture><source srcset="images/vba-analyse-couts.webp" type="image/webp"><img loading="lazy" src="images/vba-analyse-couts.jpg" alt="VBA Coûts"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag tag-vba">Excel VBA</span> <span class="project-tag">Performance industrielle</span> <span class="project-tag">Pilotage rentabilité</span><h3>Analyse des Coûts de Production</h3><p>Moteur VBA en 13 modules pour le calcul du coût de revient réel : descente automatique dans 5 niveaux de nomenclature, ~40 centres de charge, 150-200 produits par mois. Calcul passé de 3-4 jours à quelques secondes. Écart entre devis et coût réel : &gt;10% → &lt;3%. Inclut un tableau de performance par deviseur avec 2 ans d'historique pour piloter les tendances.</p></div></div>
+                <div class="project-card"><div class="project-image"><picture><source srcset="images/vba-tresorerie.webp" type="image/webp"><img loading="lazy" src="images/vba-tresorerie.jpg" alt="VBA Trésorerie"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag tag-vba">Excel VBA</span><h3>Outil de Trésorerie</h3><p>Macros VBA, flux financiers, alimentation dashboard Power BI.</p></div></div>
             </div>
 
-            <h3 class="projects-subtitle">Excel VBA — I.C.E Étiquettes (1996-2024)</h3>
+            <h3 class="projects-subtitle" data-cat="vba">Excel VBA — I.C.E Étiquettes (1996-2024)</h3>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image"><img loading="lazy" src="images/ice-temps-production.jpg" alt="Simulation"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
+                    <div class="project-image"><picture><source srcset="images/ice-temps-production.webp" type="image/webp"><img loading="lazy" src="images/ice-temps-production.jpg" alt="Simulation"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
                     <div class="project-info">
                         <span class="project-tag tag-ice">I.C.E Étiquettes</span>
                         <h3>Simulateur d'aide au chiffrage (VBA)</h3>
@@ -426,7 +500,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image"><img loading="lazy" src="images/ice-poids-sigwerk.jpg" alt="Encres"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
+                    <div class="project-image"><picture><source srcset="images/ice-poids-sigwerk.webp" type="image/webp"><img loading="lazy" src="images/ice-poids-sigwerk.jpg" alt="Encres"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
                     <div class="project-info">
                         <span class="project-tag tag-ice">I.C.E Étiquettes</span>
                         <h3>Gestion de Stockage des Encres</h3>
@@ -435,7 +509,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image"><img loading="lazy" src="images/ice-saisie-prod.jpg" alt="Pointeuse"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
+                    <div class="project-image"><picture><source srcset="images/ice-saisie-prod.webp" type="image/webp"><img loading="lazy" src="images/ice-saisie-prod.jpg" alt="Pointeuse"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
                     <div class="project-info">
                         <span class="project-tag tag-ice">I.C.E Étiquettes</span>
                         <h3>Saisie Production & Pointeuse</h3>
@@ -444,7 +518,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image"><img loading="lazy" src="images/ice-reporting.jpg" alt="Reporting"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
+                    <div class="project-image"><picture><source srcset="images/ice-reporting.webp" type="image/webp"><img loading="lazy" src="images/ice-reporting.jpg" alt="Reporting"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
                     <div class="project-info">
                         <span class="project-tag tag-ice">I.C.E Étiquettes</span>
                         <h3>Reporting, Suivi Machines & Opérateurs</h3>
@@ -453,7 +527,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image"><img loading="lazy" src="images/ice-creation-outils.jpg" alt="Commande"><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
+                    <div class="project-image"><picture><source srcset="images/ice-creation-outils.webp" type="image/webp"><img loading="lazy" src="images/ice-creation-outils.jpg" alt="Commande"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
                     <div class="project-info">
                         <span class="project-tag tag-ice">I.C.E Étiquettes</span>
                         <h3>Commande Plaques & Création Outils</h3>
@@ -463,7 +537,7 @@
                 </div>
             </div>
 
-            <h3 class="projects-subtitle">Expertise imprimerie — I.C.E Étiquettes (1996-2024)</h3>
+            <h3 class="projects-subtitle" data-cat="imprimerie">Expertise imprimerie — I.C.E Étiquettes (1996-2024)</h3>
             <div class="projects-grid">
                 <!-- Carte 1 : Référent AO -->
                 <div class="project-card">

@@ -182,3 +182,49 @@ setTimeout(loadRating, 3000);
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
+
+
+// ============================================================
+// MODERNISATION 26/08/2026
+// ============================================================
+
+// Bascule clair / sombre (l'etat initial est pose dans le <head>)
+(function () {
+  var btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    var next = cur === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    btn.setAttribute('aria-label', next === 'light' ? 'Passer en sombre' : 'Passer en clair');
+  });
+})();
+
+// Filtres de la section Realisations : un bouton pilote les paires
+// <h3.projects-subtitle data-cat> + .projects-grid qui la suit.
+(function () {
+  var boutons = document.querySelectorAll('.proj-filter');
+  if (!boutons.length) return;
+  var groupes = [];
+  document.querySelectorAll('.projects-subtitle[data-cat]').forEach(function (t) {
+    var grille = t.nextElementSibling;
+    if (grille && grille.classList.contains('projects-grid')) {
+      groupes.push({ cat: t.dataset.cat, titre: t, grille: grille });
+    }
+  });
+  function appliquer(cat) {
+    groupes.forEach(function (g) {
+      var afficher = (cat === 'all' || g.cat === cat);
+      g.titre.classList.toggle('proj-hidden', !afficher);
+      g.grille.classList.toggle('proj-hidden', !afficher);
+    });
+  }
+  boutons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      boutons.forEach(function (x) { x.classList.remove('is-active'); });
+      b.classList.add('is-active');
+      appliquer(b.dataset.filter);
+    });
+  });
+})();
