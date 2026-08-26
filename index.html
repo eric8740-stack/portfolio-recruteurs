@@ -37,7 +37,10 @@
       } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
     })();
     </script>
-    <link rel="stylesheet" href="style.css">
+    <!-- ?v= : cache-buster. A INCREMENTER a chaque evolution de style.css ou
+         script.js, sinon GitHub Pages ressert l'ancien fichier en cache et la
+         page s'affiche cassee. Meme regle pour les PDF de CV plus bas. -->
+    <link rel="stylesheet" href="style.css?v=20260826">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -762,6 +765,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260826"></script>
 </body>
 </html>
