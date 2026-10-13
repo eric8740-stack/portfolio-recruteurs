@@ -46,24 +46,6 @@
   });
 })();
 
-// Apparition douce au défilement (rien si le visiteur a demandé moins de mouvement)
-(function () {
-  if (!('IntersectionObserver' in window)) return;
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var cibles = document.querySelectorAll('.tile, .case, .steps li, .tl-card, .skill, .reco, .form');
-  var obs = new IntersectionObserver(function (entrees) {
-    entrees.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  cibles.forEach(function (el) {
-    var r = el.getBoundingClientRect();
-    if (r.top < window.innerHeight) return; // déjà à l'écran : on n'anime pas
-    el.classList.add('reveal');
-    obs.observe(el);
-  });
-})();
-
 // Année du pied de page
 (function () {
   var a = document.getElementById('annee');

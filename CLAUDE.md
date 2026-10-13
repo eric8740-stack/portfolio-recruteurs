@@ -36,12 +36,13 @@ Le `<meta name="theme-color">` suit la couleur claire.
 - `index.html` — page unique, lisible en diagonale : accueil (CV en premier bouton), « En bref » (grille
   de chiffres clés), **5 études de cas** (problème → ce que j'ai fait → résultat chiffré, une par domaine :
   finance, pilotage & qualité, maintenance, qualité & sécurité, production) + « Autres réalisations »
-  repliées, méthode en 3 étapes, parcours, compétences, recommandation, contact (Formspree).
+  repliées, recommandation, méthode en 3 étapes, parcours, compétences, contact (Formspree).
+  Choix tirés de la récolte du 13/10/2026 (claude-config, `linkedin/recolte-portfolio-2026-10/`).
   Plus d'accordéon, de modale, ni de bloc « avis des visiteurs » (retirés le 13/10/2026).
 - `style.css` — jetons de thème dans `:root` (clair), surcharge `:root[data-theme="dark"]` ; cibles
   tactiles ≥ 44 px ; trois paliers (1024, 900, 640 px).
-- `script.js` — barre de navigation, menu repliable, bascule de thème, apparition au défilement
-  (coupée si « mouvement réduit »), année du pied de page. Aucune dépendance.
+- `script.js` — barre de navigation, menu repliable, bascule de thème, année du pied de page. Aucune
+  dépendance, aucune animation au défilement (récolte du 13/10 : aucun des 6 portfolios mesurés n'en a).
 - `images/` — chaque visuel existe en `.jpg` **et** `.webp` ; le HTML sert le WebP via
   `<picture>` avec repli JPEG. Ajouter les deux formats pour toute nouvelle image.
 
@@ -59,4 +60,4 @@ Le `<meta name="theme-color">` suit la couleur claire.
 ## Vérifier après un push
 
 GitHub Pages met ~1 min. Contrôler sur **la page publiée**, pas en local : rendu, images,
-liens de démo qui répondent, modal « Voir le détail » toujours fonctionnel, console sans erreur.
+liens de démo qui répondent, menu du téléphone, bascule clair / sombre, console sans erreur.
