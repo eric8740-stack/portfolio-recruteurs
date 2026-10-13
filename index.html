@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric Paysant — Organisation, données & outils de gestion | 28 ans d'industrie</title>
-    <meta name="description" content="Polyvalent, je prends vite en main un nouveau domaine : 28 ans en production industrielle (jusqu'à responsable d'atelier), puis data analyst, et des outils de gestion menés en finance, pilotage, maintenance et qualité. Démos en ligne, données fictives.">
+    <meta name="description" content="Polyvalent, je prends vite en main un nouveau domaine : 28 ans en production industrielle (jusqu'à responsable d'atelier), puis data analyst, et des outils de gestion menés en finance, pilotage, maintenance et qualité. Études de cas et démos en ligne, données fictives.">
     <meta property="og:title" content="Eric Paysant — Organisation, données & outils de gestion">
-    <meta property="og:description" content="28 ans d'industrie, data analyst, outils de gestion en finance, pilotage, maintenance et qualité. Démos publiques en ligne.">
+    <meta property="og:description" content="28 ans d'industrie, data analyst, outils de gestion en finance, pilotage, maintenance et qualité. Études de cas et démos publiques en ligne.">
     <meta property="og:image" content="https://eric8740-stack.github.io/portfolio-recruteurs/images/app-treso.jpg">
     <meta property="og:url" content="https://eric8740-stack.github.io/portfolio-recruteurs/">
     <meta property="og:type" content="website">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0f0a'/%3E%3Ctext x='16' y='22' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='800' fill='%2322c55e' text-anchor='middle'%3EEP%3C/text%3E%3C/svg%3E">
-    <meta name="theme-color" content="#f7faf7">
     <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0f0a'/%3E%3Ctext x='16' y='22' font-family='Inter,Arial,sans-serif' font-size='15' font-weight='800' fill='%2322c55e' text-anchor='middle'%3EEP%3C/text%3E%3C/svg%3E">
+    <meta name="theme-color" content="#f8faf8">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -31,745 +31,335 @@
     <script>
     (function () {
       try {
-        // CLAIR par défaut pour tout le monde : le réglage système n'est plus
-        // consulté. Seul un choix explicite du visiteur, mémorisé ici, l'emporte.
+        // CLAIR par défaut pour tout le monde : seul un choix explicite, mémorisé ici, l'emporte.
         var t = localStorage.getItem('theme');
         document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
       } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
     })();
     </script>
-    <!-- ?v= : cache-buster. A INCREMENTER a chaque evolution de style.css ou
-         script.js, sinon GitHub Pages ressert l'ancien fichier en cache et la
-         page s'affiche cassee. Meme regle pour les PDF de CV plus bas. -->
-    <link rel="stylesheet" href="style.css?v=20261002">
+    <!-- ?v= : cache-buster. A INCREMENTER a chaque evolution de style.css, script.js ou des PDF. -->
+    <link rel="stylesheet" href="style.css?v=20261013d">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#accueil" class="nav-logo">EP<span class="dot">.</span></a>
-            <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#applications">Applications</a></li>
-                <li><a href="#parcours">Expériences</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#realisations">Réalisations</a></li>
-                <li><a href="#recommandations">Recommandations</a></li>
-                <li><a href="#avis" class="nav-rating"><span class="nav-stars" id="navStars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span id="navRating">-</span>/5</a></li>
-                <li><a href="#contact" class="nav-cta">Me proposer un poste</a></li>
-                <li><button type="button" class="theme-toggle" id="themeToggle" aria-label="Basculer clair / sombre" title="Basculer clair / sombre"><span aria-hidden="true" class="theme-icon"></span></button></li>
-            </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="hero" id="accueil">
-        <div class="hero-bg-grid"></div>
-        <div class="hero-content">
-            <div class="hero-grid">
-              <div class="hero-copy">
-                <p class="hero-tag">Disponible — CDI / CDD · missions en indépendant</p>
-                <h1 class="hero-title">
-                    Eric <span class="gradient-text">Paysant</span>
-                </h1>
-                <h2 class="hero-role">Organisation · Données · Outils de gestion sur mesure</h2>
-                <p class="hero-subtitle">
-                    Polyvalent, je prends vite en main un nouveau domaine : 28 ans en production industrielle — jusqu'à responsable d'atelier — puis data analyst sur deux ERP.<br>
-                    Depuis, des outils de gestion menés en <strong>finance, pilotage, maintenance et qualité</strong>, de la base de données au déploiement.
-                </p>
-                <div class="hero-actions">
-                    <a href="https://tresorerie.apppreview.fr" target="_blank" rel="noopener" class="btn btn-primary">Voir une démo en ligne</a>
-                    <a href="#applications" class="btn btn-outline">Mes applications</a>
-                    <a href="CV_Eric_Paysant.pdf?v=20261013" target="_blank" class="btn btn-outline">Télécharger mon CV (PDF)</a>
-                    <a href="profil-freelance.pdf?v=20261013b" target="_blank" class="btn btn-outline">Profil freelance (PDF)</a>
-                </div>
-              </div>
-              <div class="hero-visual">
-                <a class="browser-mock" href="https://tresorerie.apppreview.fr" target="_blank" rel="noopener" aria-label="Ouvrir la démo publique de l'application de suivi de trésorerie">
-                    <div class="browser-bar">
-                        <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
-                        <span class="browser-url">tresorerie.apppreview.fr</span>
-                    </div>
-                    <picture><source srcset="images/app-treso.webp" type="image/webp"><img src="images/app-treso.jpg" width="1200" height="750" alt="Tableau de bord de l'application de suivi de trésorerie, démo publique à données fictives"></picture>
-                    <span class="browser-cta">Démo publique · données 100 % fictives ↗</span>
-                </a>
-              </div>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number" data-count="28">0</span>
-                    <span class="stat-label">Ans d'expérience</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-count="100" data-prefix="~">0</span>
-                    <span class="stat-label">Appels d'offres/an</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-count="4">0</span>
-                    <span class="stat-label">Domaines métier en 1 an</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-count="5">0</span>
-                    <span class="stat-label">Sites déployés</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-count="16">0</span>
-                    <span class="stat-label">Personnes managées</span>
-                </div>
+    <header class="nav" id="nav">
+        <div class="wrap nav-in">
+            <a href="#accueil" class="logo" aria-label="Eric Paysant, retour en haut">EP<span>.</span></a>
+            <nav aria-label="Sections">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#etudes">Projets</a></li>
+                    <li><a href="#recommandation">Recommandation</a></li>
+                    <li><a href="#parcours">Parcours</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="CV_Eric_Paysant.pdf?v=20261013" target="_blank" rel="noopener" class="btn btn-primary btn-sm nav-cv">Mon CV</a>
+                <button type="button" class="icon-btn" id="themeToggle" aria-label="Basculer clair / sombre" title="Basculer clair / sombre"><span class="theme-icon" aria-hidden="true"></span></button>
+                <button type="button" class="icon-btn nav-burger" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
             </div>
         </div>
-    </section>
+    </header>
 
+    <main id="contenu">
 
-    <!-- Applications web -->
-    <section class="section section-dark" id="applications">
-        <div class="container">
-            <h2 class="section-title">Applications web</h2>
-            <p class="section-subtitle">Quatre domaines en un an — finance, pilotage, maintenance, qualité · démos publiques en ligne</p>
-            <div class="apps-grid">
-                <article class="app-card"><div class="app-shot"><picture><source srcset="images/app-treso.webp" type="image/webp"><img loading="lazy" src="images/app-treso.jpg" width="1200" height="750" alt="Capture de l'application Suivi de trésorerie (démo, données fictives)"></picture></div><div class="app-body"><h3>Suivi de trésorerie</h3><p>Remplacement d'un classeur Excel de 20 ans (4 onglets, ~10 000 cellules) par une application multi-utilisateur : saisies guidées, indicateurs recalculés, export, sauvegarde en un clic. Les résultats sont prouvés identiques à l'Excel d'origine par plus de 350 tests automatisés.</p><ul class="skill-tags app-tags"><li>FastAPI</li><li>SQLite</li><li>Next.js</li><li>Serveur Linux</li><li>Package Windows</li></ul><a class="app-demo" href="https://tresorerie.apppreview.fr" target="_blank" rel="noopener">Voir la démo <span aria-hidden="true">↗</span></a></div></article>
-                <article class="app-card"><div class="app-shot"><picture><source srcset="images/app-pilotage.webp" type="image/webp"><img loading="lazy" src="images/app-pilotage.jpg" width="1200" height="750" alt="Capture de l'application Pilotage d'activité industrielle (démo, données fictives)"></picture></div><div class="app-body"><h3>Pilotage d'activité industrielle</h3><p>Classeur de pilotage porté vers le web : chiffre d'affaires, carnet de commandes, charge de travail par centre, retards de livraison, marges. Livré en package autonome installé par le client sur son propre serveur — aucune donnée ne sort de chez lui.</p><ul class="skill-tags app-tags"><li>FastAPI</li><li>Next.js</li><li>Package Windows</li><li>Installation client</li></ul><a class="app-demo" href="https://demo.apppreview.fr" target="_blank" rel="noopener">Voir la démo <span aria-hidden="true">↗</span></a><small class="stat-label">Identifiants de démo affichés sur la page de connexion</small></div></article>
-                <article class="app-card"><div class="app-shot"><picture><source srcset="images/app-maintenance.webp" type="image/webp"><img loading="lazy" src="images/app-maintenance.jpg" width="1200" height="750" alt="Capture de l'application Maintenance machines (données fictives)"></picture></div><div class="app-body"><h3>Maintenance machines — suivi d'atelier</h3><p>Le tableau de suivi maintenance d'un atelier (un Excel + un dossier par équipement) devenu une application : fiches de panne numérotées, liens vers les dossiers de l'équipement, traçabilité automatique (qui, quand, quoi), préventif avec alertes, tableau de bord des équipements pénalisants, import de l'Excel existant. Installée chez le client, comptes illimités, aucune donnée ne sort de chez lui. Analyse IA des documents de la fiche en option.</p><ul class="skill-tags app-tags"><li>FastAPI</li><li>SQLite</li><li>Next.js</li><li>Package Windows</li><li>Import Excel</li></ul><a class="app-demo" href="https://maintenance.apppreview.fr" target="_blank" rel="noopener">Voir la démo <span aria-hidden="true">↗</span></a></div></article>
-                <article class="app-card"><div class="app-shot"><picture><source srcset="images/app-fds-seirich.webp" type="image/webp"><img loading="lazy" src="images/app-fds-seirich.jpg" width="1200" height="750" alt="Capture de l'écran Produits de FDS → Seirich : produits sans FDS, à renouveler, à vérifier (démonstration, données fictives)"></picture></div><div class="app-body"><h3>FDS → Seirich — fiches de données de sécurité</h3><p>Les fiches de données de sécurité reçues des fournisseurs sont lues, rapprochées de la liste des composants, renommées, rangées et tracées dans un registre ; le classeur d'import de Seirich (évaluation du risque chimique, INRS) est produit automatiquement. Conçue avec une responsable qualité, pour une installation chez le client : aucune donnée ne sort de chez lui.</p><ul class="skill-tags app-tags"><li>FastAPI</li><li>SQLite</li><li>Next.js</li><li>Package Windows</li><li>1 400+ tests</li></ul><span class="app-demo app-demo-off">En recette — démonstration fin octobre 2026</span></div></article>
-                <article class="app-card"><div class="app-shot"><picture><source srcset="images/app-espace-pro.webp" type="image/webp"><img loading="lazy" src="images/app-espace-pro.jpg" width="1200" height="750" alt="Capture du formulaire public de demande d'intervention de l'Espace Pro"></picture></div><div class="app-body"><h3>Espace Pro — gestion commerciale</h3><p>Devis et factures PDF, numérotation automatique, suivi des paiements et relances, bilan annuel, déclarations, formulaires clients publics. 100 % statique, sans serveur ni abonnement.</p><ul class="skill-tags app-tags"><li>HTML/CSS/JS</li><li>Apps Script</li><li>Airtable</li><li>GitHub Pages</li></ul></div></article>
-                <article class="app-card"><div class="app-shot"><picture><source srcset="images/app-flexosuite.webp" type="image/webp"><img loading="lazy" src="images/app-flexosuite.jpg" width="1200" height="750" alt="Capture de l'écran d'optimisation de pose de FlexoSuite (données de démonstration fictives)"></picture></div><div class="app-body"><h3>FlexoSuite — devis flexographie</h3><p>Application de chiffrage pour imprimeurs flexo : catalogue d'outils, recherche de format approchant, calcul de devis. En cours de développement, conçue de zéro à partir de 28 ans de métier — l'imprimeur calculera avec ses propres tarifs.</p><ul class="skill-tags app-tags"><li>FastAPI</li><li>SQLModel</li><li>Next.js</li><li>Package Windows</li></ul><span class="app-demo app-demo-off">En cours de développement</span></div></article>
-            </div>
-
-            <h3 class="methode-title">Ma méthode</h3>
-            <ol class="methode-grid">
-                <li class="methode-step"><span class="methode-num">01</span><h4>J'audite votre fichier</h4><p>Je lis les formules, les cas particuliers et les habitudes de saisie. Ce qui marche est conservé — c'est votre métier, pas le mien.</p></li>
-                <li class="methode-step"><span class="methode-num">02</span><h4>Je reconstruis en application</h4><p>Formulaires simples à la place des cellules fragiles, base de données, multi-utilisateur, accès à distance.</p></li>
-                <li class="methode-step"><span class="methode-num">03</span><h4>Je prouve l'égalité des résultats</h4><p>Des tests automatisés rejouent vos calculs : l'application doit retrouver les mêmes chiffres que l'Excel, au centime.</p></li>
-                <li class="methode-step"><span class="methode-num">04</span><h4>Je livre et je forme</h4><p>Installation sur votre serveur depuis une clé USB, notice pour votre technicien, sauvegarde en un clic. Aucune donnée ne sort de chez vous.</p></li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- Profil -->
-    <section class="section section-dark" id="profil">
-        <div class="container">
-            <div class="profil-box">
-                <h2>Profil</h2>
-                <p><strong>Polyvalent, je prends vite en main un nouveau domaine.</strong> 28 ans de production industrielle chez ICE Étiquettes : parcours complet conducteur → chef d'équipe → responsable d'atelier (16 personnes en 3×8), <strong>référent technique sur ~100 appels d'offres par an</strong>, et <strong>digitalisation autonome du métier</strong> depuis 2001 : aide au chiffrage, gestion des stocks (−30 % de pertes, déployé sur 5 sites), reporting de production. Puis data analyst chez A3D Design : tableaux de bord de direction ISO 9001, coûts de revient. Depuis 2026, des outils de gestion menés dans des domaines très différents — <strong>trésorerie, pilotage d'activité, maintenance, qualité</strong> — avec la même méthode : comprendre le métier, fiabiliser les données, construire l'outil qui permet de piloter. <strong>Disponible depuis le 19/09/2026.</strong></p>
-                <div class="profil-details">
-                    <span>Haute-Vienne & départements limitrophes</span>
-                    <span>Télétravail possible</span>
-                    <span>CDI, CDD ou mission</span>
+        <!-- Accueil -->
+        <section class="hero" id="accueil">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <p class="badge"><span class="pulse" aria-hidden="true"></span>Disponible — CDI, CDD ou mission · Haute-Vienne et télétravail</p>
+                    <h1>Eric Paysant</h1>
+                    <p class="hero-role">Organisation · Données · Outils de gestion sur mesure</p>
+                    <p class="hero-lead"><strong>Polyvalent, je prends vite en main un nouveau domaine.</strong> 28 ans en production industrielle, jusqu'à la responsabilité d'un atelier de 16 personnes, puis data analyst. Depuis, des outils menés en <strong>finance, pilotage, maintenance et qualité</strong> : je comprends le métier, je fiabilise les données, je construis l'outil.</p>
+                    <div class="hero-actions">
+                        <a href="CV_Eric_Paysant.pdf?v=20261013" target="_blank" rel="noopener" class="btn btn-primary">Télécharger mon CV</a>
+                        <a href="#etudes" class="btn btn-ghost">Voir les études de cas</a>
+                    </div>
+                    <p class="hero-small">Aussi : <a href="profil-freelance.pdf?v=20261013b" target="_blank" rel="noopener">profil freelance (PDF)</a> · <a href="https://www.linkedin.com/in/ericpaysant" target="_blank" rel="noopener">LinkedIn</a></p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Parcours -->
-    <section class="section" id="parcours">
-        <div class="container">
-            <h2 class="section-title">Expériences professionnelles</h2>
-            <p class="section-subtitle">Un parcours terrain + data unique</p>
-
-            <div class="timeline">
-                <!-- A3D -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-date">Oct. 2025 — Févr. 2026 · Juil. — Sept. 2026</div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>Data Analyst — Data & Performance industrielle</h3>
-                            <span class="company">A3D Design — Feytiat (87)</span>
-                            <span class="contract">Deux CDD — 7 mois</span>
-                        </div>
-                        <ul class="timeline-achievements">
-                            <li><strong>ISO 9001 Revue de Direction</strong> : tableau de bord Power BI 56 pages, ~400 mesures DAX, modèle sémantique 40 tables, 2 ERP via ODBC (Solune + Qualishare) — <em>point critique → point fort auditeur</em></li>
-                            <li><strong>Coût de revient réel</strong> : moteur VBA 13 modules, ~40 centres de charge — calcul passé de <em>3-4 jours/mois à quelques secondes</em>, écart réduit de <em>&gt;10% à &lt;3%</em></li>
-                            <li><strong>40 tables analytiques</strong> modélisées — reporting Power BI multi-sources temps réel</li>
-                            <li>Tableau de bord <strong>trésorerie</strong> Power BI (5 comptes, 24 périodes bi-mensuelles)</li>
-                            <li><strong>Deux outils métier portés en applications web</strong> (suivi de trésorerie, pilotage d'activité) — <em>installés sur le serveur du client en 09/2026</em> ; <strong>maintenance machines</strong> en démonstration chez le client (09/2026)</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Power BI</span><span>DAX</span><span>VBA</span><span>ODBC</span><span>Solune</span><span>Qualishare</span><span>Python</span><span>FastAPI</span><span>Next.js</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Reconversion -->
-                <div class="timeline-item">
-                    <div class="timeline-marker marker-accent"></div>
-                    <div class="timeline-date">2024 — 2026</div>
-                    <div class="timeline-card card-accent">
-                        <div class="timeline-header">
-                            <h3>Reconversion & Formations Data</h3>
-                            <span class="company">Haute-Vienne (87)</span>
-                        </div>
-                        <ul class="timeline-achievements">
-                            <li><strong>Formation Power BI</strong> — DataScientest</li>
-                            <li><strong>Certification SQL</strong> — DataScientest</li>
-                            <li><strong>Certification Tosa Python 3</strong> — DAWAN (septembre 2025)</li>
-                            <li><strong>Initiation Supply Chain</strong> — Udemy (2026)</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Power BI</span><span>SQL</span><span>Python</span><span>Supply Chain</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ICE -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-date">1996 — 2024</div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>Responsable d'atelier — Référent technique imprimerie flexo</h3>
-                            <span class="company">I.C.E Étiquettes (Groupe URA puis Canopeo / Printeos) — Limoges (87)</span>
-                            <span class="contract">CDI — 28 ans</span>
-                        </div>
-                        <ul class="timeline-achievements">
-                            <li><strong>Parcours complet atelier</strong> : conducteur imprimeur flexo (1996-2014, 18 ans) → chef d'équipe 2x8 6 personnes (2001-2014) → responsable d'atelier 16 personnes en 3x8 (2014-2024)</li>
-                            <li><strong>Référent technique appels d'offres</strong> : ~100 AO/an en soutien aux commerciaux — faisabilité, choix machine, calcul matière/gâche, cadence, délais. ICE était LA filiale du groupe pour les dossiers complexes</li>
-                            <li><strong>Expertise chaîne graphique complète</strong> : flexographie 100%, machines Mark Andy/OMET/Rotoflex (laize 330-470mm, 8 couleurs), supports papier couché/PP/PE/PET/adhésifs, finitions vernis UV/dorure à froid/découpe rotative</li>
-                            <li><strong>Innovations techniques</strong> : système d'expulsion air comprimé pour découpes feuille à feuille (unique dans le groupe), pose décalée pour augmenter vitesses, triptyque de contrôle spectrophotométrique pour client export USA (tolérance zéro)</li>
-                            <li><strong>Ordonnancement quotidien</strong> : priorisation des jobs selon délais clients, capacités machines et disponibilité opérateurs</li>
-                            <li><strong>Reporting mensuel 27 onglets</strong> : performance opérateurs, temps perdus, CA vs objectifs — livré à la direction</li>
-                            <li><strong>Réduction 30%</strong> des coûts de stock d'encre — projet déployé sur 5 sites, déclencheur d'un investissement logiciel</li>
-                            <li><strong>Simulateur</strong> d'estimation temps de production par machine et opérateur</li>
-                            <li>Outil commande d'outils : <strong>10 min → 2 min</strong> (gain 80%) — 1 800+ formats référencés, aide à la décision sur développés/porte-clichés/cylindres par machine</li>
-                            <li><strong>Management</strong> d'équipes de production : 6 personnes en 2x8 (2001–2014), puis <strong>16 personnes en 3x8</strong> (2014–2024)</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Flexographie</span><span>Référent technique AO</span><span>Ordonnancement</span><span>CERM</span><span>Excel VBA</span><span>Management 3x8</span><span>Spectrophotométrie</span><span>Lean / 5S</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Compétences -->
-    <section class="section section-dark" id="competences">
-        <div class="container">
-            <h2 class="section-title">Compétences</h2>
-            <p class="section-subtitle">Un profil rare : terrain + data + ERP</p>
-
-            <div class="skills-grid">
-                <div class="skill-card" data-preview="images/skill-powerbi.jpg">
-                    <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
-                    <h3>Business Intelligence</h3>
-                    <ul class="skill-tags"><li>Power BI</li><li>DAX</li><li>Power Query</li></ul>
-                </div>
-                <div class="skill-card" data-preview="images/skill-vba.jpg">
-                    <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h10"/><rect x="2" y="3" width="20" height="18" rx="2"/></svg></div>
-                    <h3>Automatisation</h3>
-                    <ul class="skill-tags"><li>VBA</li><li>Python</li><li>Excel avancé</li></ul>
-                </div>
-                <div class="skill-card" data-preview="images/skill-bdd.jpg">
-                    <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-                    <h3>Base de données</h3>
-                    <ul class="skill-tags"><li>SQL</li><li>ODBC</li><li>Modélisation relationnelle</li></ul>
-                </div>
-                <div class="skill-card" data-preview="images/skill-erp.jpg">
-                    <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-                    <h3>ERP & Production</h3>
-                    <ul class="skill-tags"><li>Solune</li><li>Qualishare</li><li>CERM</li><li>Gestion stocks</li></ul>
-                </div>
-                <div class="skill-card" data-preview="images/skill-lean.jpg">
-                    <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-                    <h3>Lean / Qualité</h3>
-                    <ul class="skill-tags"><li>Six Sigma Yellow Belt</li><li>5S</li><li>Kaizen</li><li>ISO 9001</li></ul>
-                </div>
-                <div class="skill-card" data-preview="images/skill-planif.jpg">
-                    <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-                    <h3>Planification</h3>
-                    <ul class="skill-tags"><li>Ordonnancement</li><li>MRP</li><li>Plan de charge</li><li>Gestion des OF</li></ul>
-                </div>
-                <div class="skill-card" data-preview="images/skill-printing.jpg">
-                    <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></div>
-                    <h3>Imprimerie & Chaîne graphique</h3>
-                    <ul class="skill-tags"><li>Flexographie</li><li>Aide au chiffrage AO</li><li>Colorimétrie / Spectrophotométrie</li><li>Pantone / PMS</li><li>Plaques & clichés</li><li>Optimisation gâche/cadence</li></ul>
-                </div>
-            </div>
-
-            <!-- Preview flottant -->
-            <div class="skill-preview" id="skillPreview">
-                <img id="skillPreviewImg" src="" alt="">
-            </div>
-
-            <!-- Certifications -->
-            <div class="certifications">
-                <h3 class="certif-title">Certifications & Formations</h3>
-                <div class="certif-grid">
-                    <div class="certif-card"><span class="certif-year">2025</span><h4>Tosa Python 3</h4><p>DAWAN</p></div>
-                    <div class="certif-card"><span class="certif-year">2024-2025</span><h4>Power BI</h4><p>DataScientest</p></div>
-                    <div class="certif-card"><span class="certif-year">2024-2025</span><h4>SQL</h4><p>DataScientest</p></div>
-                    <div class="certif-card"><span class="certif-year">2026</span><h4>Initiation à la Supply Chain</h4><p>Udemy</p></div>
-                    <div class="certif-card"><span class="certif-year">2020</span><h4>Lean Six Sigma Yellow Belt</h4><p></p></div>
-                    <div class="certif-card"><span class="certif-year">2017</span><h4>Flexographie (5 jours)</h4><p>5I Conseil — Sainte-Ménehould</p></div>
-                    <div class="certif-card"><span class="certif-year">2022</span><h4>Spectrophotométrie (4 jours)</h4><p>5I Conseil — sur site ICE</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Vitrine Accordéon -->
-    <section class="section section-dark" id="vitrine">
-        <div class="container">
-            <h2 class="section-title">Aperçu de mes projets</h2>
-            <p class="section-subtitle">Survolez pour explorer, cliquez pour voir le détail</p>
-            <div class="accordion" id="accordion">
-                <a href="#realisations" class="accordion-item active" data-index="0">
-                    <picture><source srcset="images/trame-rdd.webp" type="image/webp"><img loading="lazy" src="images/trame-rdd.jpg" alt="ISO 9001"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-pbi">Power BI</span>
-                    <span class="accordion-title-vertical">ISO 9001</span>
-                    <div class="accordion-caption">
-                        <h3>ISO 9001 — Revue De Direction</h3>
-                        <p>56 pages, ~400 mesures DAX, 40 tables. Point critique → point fort audit.</p>
-                        <div class="accordion-badges"><span>56 pages</span><span>400 DAX</span><span>Point fort audit</span></div>
-                    </div>
-                </a>
-                <a href="#realisations" class="accordion-item" data-index="1">
-                    <picture><source srcset="images/analyse-couts-production.webp" type="image/webp"><img loading="lazy" src="images/analyse-couts-production.jpg" alt="Coûts Production"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-pbi">Power BI</span>
-                    <span class="accordion-title-vertical">Coûts Production</span>
-                    <div class="accordion-caption">
-                        <h3>Analyse des Coûts de Production</h3>
-                        <p>6 pages connectées au moteur VBA. Rentabilité, écarts, charge de travail.</p>
-                        <div class="accordion-badges"><span>6 pages</span><span>145 DAX</span></div>
-                    </div>
-                </a>
-                <a href="#realisations" class="accordion-item" data-index="2">
-                    <picture><source srcset="images/vba-analyse-couts.webp" type="image/webp"><img loading="lazy" src="images/vba-analyse-couts.jpg" alt="VBA Coûts"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-acc-vba">Excel VBA</span>
-                    <span class="accordion-title-vertical">VBA 13 modules</span>
-                    <div class="accordion-caption">
-                        <h3>Moteur VBA — Coûts de Production</h3>
-                        <p>13 modules, ~40 centres de charge. De 3-4 jours à quelques secondes.</p>
-                        <div class="accordion-badges"><span>13 modules</span><span>3-4j → sec</span><span>Écart &lt;3%</span></div>
-                    </div>
-                </a>
-                <a href="#realisations" class="accordion-item" data-index="3">
-                    <picture><source srcset="images/ice-reporting.webp" type="image/webp"><img loading="lazy" src="images/ice-reporting.jpg" alt="Reporting ICE"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-acc-ice">ICE Étiquettes</span>
-                    <span class="accordion-title-vertical">Reporting</span>
-                    <div class="accordion-caption">
-                        <h3>Reporting, Suivi Machines & Opérateurs</h3>
-                        <p>27 onglets, 6 machines, objectifs, primes, NC et CA.</p>
-                        <div class="accordion-badges"><span>27 onglets</span><span>6 machines</span></div>
-                    </div>
-                </a>
-                <a href="#realisations" class="accordion-item" data-index="4">
-                    <picture><source srcset="images/ice-creation-outils.webp" type="image/webp"><img loading="lazy" src="images/ice-creation-outils.jpg" alt="Commande Outils"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-acc-ice">ICE Étiquettes</span>
-                    <span class="accordion-title-vertical">Outils</span>
-                    <div class="accordion-caption">
-                        <h3>Commande Plaques & Création Outils</h3>
-                        <p>Temps réduit de 10 min à 2 min. 1 800+ formats référencés.</p>
-                        <div class="accordion-badges"><span>-80% temps</span><span>1 800+ formats</span></div>
-                    </div>
-                </a>
-                <a href="#realisations" class="accordion-item" data-index="5">
-                    <picture><source srcset="images/tresorerie.webp" type="image/webp"><img loading="lazy" src="images/tresorerie.jpg" alt="Trésorerie"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-pbi">Power BI</span>
-                    <span class="accordion-title-vertical">Trésorerie</span>
-                    <div class="accordion-caption">
-                        <h3>Trésorerie</h3>
-                        <p>5 comptes bancaires, 24 périodes bi-mensuelles.</p>
-                        <div class="accordion-badges"><span>5 comptes</span><span>24 périodes</span></div>
-                    </div>
-                </a>
-                <a href="#realisations" class="accordion-item" data-index="6">
-                    <picture><source srcset="images/maintenance.webp" type="image/webp"><img loading="lazy" src="images/maintenance.jpg" alt="Maintenance"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-pbi">Power BI</span>
-                    <span class="accordion-title-vertical">Maintenance</span>
-                    <div class="accordion-caption">
-                        <h3>Maintenance</h3>
-                        <p>Suivi équipements, interventions et planification préventive.</p>
-                        <div class="accordion-badges"><span>3 pages</span><span>Préventif</span></div>
-                    </div>
-                </a>
-                <a href="#realisations" class="accordion-item" data-index="7">
-                    <picture><source srcset="images/retards-livraison.webp" type="image/webp"><img loading="lazy" src="images/retards-livraison.jpg" alt="OTD"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-pbi">Power BI</span>
-                    <span class="accordion-title-vertical">OTD</span>
-                    <div class="accordion-caption">
-                        <h3>Analyse OTD — Retards de Livraison</h3>
-                        <p>Pareto, causes, délais par chef de projet et performance par client.</p>
-                        <div class="accordion-badges"><span>6 pages</span><span>Pareto</span></div>
-                    </div>
-                </a>
-                <a href="#realisations" class="accordion-item" data-index="8">
-                    <picture><source srcset="images/vba-tresorerie.webp" type="image/webp"><img loading="lazy" src="images/vba-tresorerie.jpg" alt="VBA Trésorerie"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-acc-vba">Excel VBA</span>
-                    <span class="accordion-title-vertical">VBA Tréso</span>
-                    <div class="accordion-caption">
-                        <h3>Outil de Trésorerie</h3>
-                        <p>Macros VBA, flux financiers, alimentation dashboard Power BI.</p>
-                        <div class="accordion-badges"><span>Macros</span><span>Flux financiers</span></div>
-                    </div>
-                </a>
-                <a href="#realisations" class="accordion-item" data-index="9">
-                    <picture><source srcset="images/ice-temps-production.webp" type="image/webp"><img loading="lazy" src="images/ice-temps-production.jpg" alt="Simulation"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-acc-ice">ICE Étiquettes</span>
-                    <span class="accordion-title-vertical">Chiffrage AO</span>
-                    <div class="accordion-caption">
-                        <h3>Simulateur d'aide au chiffrage (VBA)</h3>
-                        <p>Aide au chiffrage des AO : faisabilité technique, choix machine, calcul matière.</p>
-                        <div class="accordion-badges"><span>10 onglets</span><span>6 modules VBA</span></div>
-                    </div>
-                </a>
-                <a href="#realisations" class="accordion-item" data-index="10">
-                    <picture><source srcset="images/ice-poids-sigwerk.webp" type="image/webp"><img loading="lazy" src="images/ice-poids-sigwerk.jpg" alt="Encres"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-acc-ice">ICE Étiquettes</span>
-                    <span class="accordion-title-vertical">Encres</span>
-                    <div class="accordion-caption">
-                        <h3>Gestion de Stockage des Encres</h3>
-                        <p>-30% pertes d'encre. Déployé sur 5 sites.</p>
-                        <div class="accordion-badges"><span>-30% pertes</span><span>5 sites</span></div>
-                    </div>
-                </a>
-                <a href="#realisations" class="accordion-item" data-index="11">
-                    <picture><source srcset="images/ice-saisie-prod.webp" type="image/webp"><img loading="lazy" src="images/ice-saisie-prod.jpg" alt="Pointeuse"></picture>
-                    <div class="accordion-overlay"></div>
-                    <span class="accordion-tag tag-acc-ice">ICE Étiquettes</span>
-                    <span class="accordion-title-vertical">Pointeuse</span>
-                    <div class="accordion-caption">
-                        <h3>Saisie Production & Pointeuse</h3>
-                        <p>Pointeuse intégrée, étiquette de suivi inter-équipes.</p>
-                        <div class="accordion-badges"><span>13 modules VBA</span><span>Traçabilité</span></div>
-                    </div>
+                <a class="browser" href="https://tresorerie.apppreview.fr" target="_blank" rel="noopener" aria-label="Ouvrir la démo publique de l'application de suivi de trésorerie">
+                    <span class="browser-bar"><i></i><i></i><i></i><span class="browser-url">tresorerie.apppreview.fr</span></span>
+                    <picture><source srcset="images/app-treso.webp" type="image/webp"><img src="images/app-treso.jpg" width="1200" height="750" alt="Tableau de bord de l'application de suivi de trésorerie, démo publique à données fictives" fetchpriority="high"></picture>
+                    <span class="browser-cta">Démo en ligne · données 100 % fictives ↗</span>
                 </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Réalisations -->
-    <section class="section" id="realisations">
-        <div class="container">
-            <h2 class="section-title">Réalisations clés</h2>
-            <p class="section-subtitle">Résultats mesurables et impact concret</p>
-
-            <div class="impact-grid">
-                <div class="impact-card"><span class="impact-number">3-4j → sec</span><p>Calcul coût de revient</p></div>
-                <div class="impact-card"><span class="impact-number">&gt;10% → &lt;3%</span><p>Écart coût de revient</p></div>
-                <div class="impact-card"><span class="impact-number">-30%</span><p>Coûts stock encre</p></div>
-                <div class="impact-card"><span class="impact-number">-80%</span><p>Temps commande outils</p></div>
-                <div class="impact-card"><span class="impact-number">56 pages</span><p>Dashboard ISO 9001</p></div>
-                <div class="impact-card"><span class="impact-number">5 sites</span><p>Déploiement projet</p></div>
-                <div class="impact-card"><span class="impact-number">~100/an</span><p>Appels d'offres traités</p></div>
-                <div class="impact-card"><span class="impact-number">16 pers.</span><p>Équipe 3x8 managée</p></div>
-                <div class="impact-card"><span class="impact-number">28 ans</span><p>Expertise flexographie</p></div>
+        <!-- En bref -->
+        <section class="section section-tight" aria-labelledby="bref-titre">
+            <div class="wrap">
+                <h2 class="sr-only" id="bref-titre">En bref</h2>
+                <ul class="bento">
+                    <li class="tile tile-xl">
+                        <span class="tile-top">En bref</span>
+                        <span class="tile-main">
+                            <span class="tile-k">28 ans</span>
+                            <span class="tile-l">en production industrielle</span>
+                            <span class="tile-d">D'opérateur à responsable d'atelier : 16 personnes en 3×8, planification quotidienne, coûts et délais. Puis data analyst, et quatre domaines métier en un an.</span>
+                        </span>
+                    </li>
+                    <li class="tile"><span class="tile-k">−30 %</span><span class="tile-l">de coûts de stock</span><span class="tile-d">par le pilotage par la donnée, déployé sur 5 sites</span></li>
+                    <li class="tile"><span class="tile-k tile-k-sm">3-4 jours → secondes</span><span class="tile-l">calcul du coût de revient</span><span class="tile-d">écart réel / standard de plus de 10 % à moins de 3 %</span></li>
+                    <li class="tile"><span class="tile-k tile-k-sm">Point critique → point fort</span><span class="tile-l">audit ISO 9001</span><span class="tile-d">grâce au tableau de bord de revue de direction</span></li>
+                    <li class="tile"><span class="tile-k">350+</span><span class="tile-l">tests automatisés</span><span class="tile-d">pour prouver qu'une application calcule comme l'Excel d'origine</span></li>
+                </ul>
             </div>
+        </section>
 
-
-            <div class="proj-filters" role="group" aria-label="Filtrer les réalisations">
-                <button type="button" class="proj-filter is-active" data-filter="all">Tout</button>
-                <button type="button" class="proj-filter" data-filter="powerbi">Power BI</button>
-                <button type="button" class="proj-filter" data-filter="vba">Excel VBA</button>
-                <button type="button" class="proj-filter" data-filter="imprimerie">Imprimerie</button>
-            </div>
-            <h3 class="projects-subtitle" data-cat="powerbi">Power BI — A3D Design</h3>
-            <div class="projects-grid">
-                <div class="project-card"><div class="project-image"><picture><source srcset="images/trame-rdd.webp" type="image/webp"><img loading="lazy" src="images/trame-rdd.jpg" alt="ISO 9001"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>ISO 9001 — Revue De Direction</h3><p>56 pages, ~400 mesures DAX, modèle sémantique 40 tables. 2 ERP via ODBC. Point critique → point fort audit.</p></div></div>
-                <div class="project-card"><div class="project-image"><picture><source srcset="images/analyse-couts-production.webp" type="image/webp"><img loading="lazy" src="images/analyse-couts-production.jpg" alt="Coûts Production"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Analyse des Coûts de Production</h3><p>6 pages connectées au moteur VBA. Rentabilité, écarts de coûts, charge de travail par centre.</p></div></div>
-                <div class="project-card"><div class="project-image"><picture><source srcset="images/tresorerie.webp" type="image/webp"><img loading="lazy" src="images/tresorerie.jpg" alt="Trésorerie"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Trésorerie</h3><p>5 comptes bancaires, 24 périodes bi-mensuelles, flux financiers et prévisions.</p></div></div>
-                <div class="project-card"><div class="project-image"><picture><source srcset="images/maintenance.webp" type="image/webp"><img loading="lazy" src="images/maintenance.jpg" alt="Maintenance"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Maintenance</h3><p>Suivi équipements, interventions et planification préventive.</p></div></div>
-                <div class="project-card"><div class="project-image"><picture><source srcset="images/retards-livraison.webp" type="image/webp"><img loading="lazy" src="images/retards-livraison.jpg" alt="OTD"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag">Power BI</span><h3>Analyse OTD — Retards de Livraison</h3><p>6 pages, Pareto, causes, délais par chef de projet et performance par client.</p></div></div>
-            </div>
-
-            <h3 class="projects-subtitle" data-cat="vba">Excel VBA — A3D Design</h3>
-            <div class="projects-grid">
-                <div class="project-card"><div class="project-image"><picture><source srcset="images/vba-analyse-couts.webp" type="image/webp"><img loading="lazy" src="images/vba-analyse-couts.jpg" alt="VBA Coûts"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag tag-vba">Excel VBA</span> <span class="project-tag">Performance industrielle</span> <span class="project-tag">Pilotage rentabilité</span><h3>Analyse des Coûts de Production</h3><p>Moteur VBA en 13 modules pour le calcul du coût de revient réel : descente automatique dans 5 niveaux de nomenclature, ~40 centres de charge, 150-200 produits par mois. Calcul passé de 3-4 jours à quelques secondes. Écart entre devis et coût réel : &gt;10% → &lt;3%. Inclut un tableau de performance par deviseur avec 2 ans d'historique pour piloter les tendances.</p></div></div>
-                <div class="project-card"><div class="project-image"><picture><source srcset="images/vba-tresorerie.webp" type="image/webp"><img loading="lazy" src="images/vba-tresorerie.jpg" alt="VBA Trésorerie"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div><div class="project-info"><span class="project-tag tag-vba">Excel VBA</span><h3>Outil de Trésorerie</h3><p>Macros VBA, flux financiers, alimentation dashboard Power BI.</p></div></div>
-            </div>
-
-            <h3 class="projects-subtitle" data-cat="vba">Excel VBA — I.C.E Étiquettes (1996-2024)</h3>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"><picture><source srcset="images/ice-temps-production.webp" type="image/webp"><img loading="lazy" src="images/ice-temps-production.jpg" alt="Simulation"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
-                    <div class="project-info">
-                        <span class="project-tag tag-ice">I.C.E Étiquettes</span>
-                        <h3>Simulateur d'aide au chiffrage (VBA)</h3>
-                        <p>Simulateur conçu en soutien aux commerciaux et à la direction pour le chiffrage des appels d'offres. Calcule les temps de production et la gâche papier selon le nombre de couleurs, la laize, la cadence — permet de déterminer la faisabilité technique, d'arbitrer le choix machine optimale et d'affiner le chiffrage.</p>
-                        <ul class="skill-tags" style="margin-top:0.8rem"><li>10 onglets</li><li>6 modules VBA</li><li>Aide au chiffrage</li><li>Faisabilité</li></ul>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"><picture><source srcset="images/ice-poids-sigwerk.webp" type="image/webp"><img loading="lazy" src="images/ice-poids-sigwerk.jpg" alt="Encres"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
-                    <div class="project-info">
-                        <span class="project-tag tag-ice">I.C.E Étiquettes</span>
-                        <h3>Gestion de Stockage des Encres</h3>
-                        <p>Système de stockage et suivi des encres par référence Pantone (PMS), gestion des poids et prix de vente. À chaque validation, impression automatique d'une étiquette de traçabilité indiquant l'emplacement de stockage, le numéro de lot et la date de fabrication. Réduction des pertes d'encre de plus de 30% — résultat reconnu par la direction, déclencheur d'un investissement logiciel déployé sur 5 sites.</p>
-                        <ul class="skill-tags" style="margin-top:0.8rem"><li>8 onglets</li><li>-30% pertes</li><li>Pantone/PMS</li><li>Traçabilité</li><li>Stockage</li></ul>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"><picture><source srcset="images/ice-saisie-prod.webp" type="image/webp"><img loading="lazy" src="images/ice-saisie-prod.jpg" alt="Pointeuse"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
-                    <div class="project-info">
-                        <span class="project-tag tag-ice">I.C.E Étiquettes</span>
-                        <h3>Saisie Production & Pointeuse</h3>
-                        <p>Application de saisie directe par les opérateurs avec pointeuse intégrée. À la validation, une étiquette de suivi est imprimée et placée dans le dossier pour permettre à l'opérateur suivant de contrôler les données et assurer la traçabilité inter-équipes.</p>
-                        <ul class="skill-tags" style="margin-top:0.8rem"><li>5 onglets</li><li>13 modules VBA</li><li>Pointeuse</li><li>Étiquette de suivi</li></ul>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"><picture><source srcset="images/ice-reporting.webp" type="image/webp"><img loading="lazy" src="images/ice-reporting.jpg" alt="Reporting"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
-                    <div class="project-info">
-                        <span class="project-tag tag-ice">I.C.E Étiquettes</span>
-                        <h3>Reporting, Suivi Machines & Opérateurs</h3>
-                        <p>Tableau de reporting central de 27 onglets : tableaux de bord, suivi de 6 machines et des opérateurs, objectifs de production, primes, non-conformités et chiffre d'affaires. Livré chaque mois à la direction.</p>
-                        <ul class="skill-tags" style="margin-top:0.8rem"><li>27 onglets</li><li>6 machines</li><li>Reporting</li><li>NC & Primes</li></ul>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"><picture><source srcset="images/ice-creation-outils.webp" type="image/webp"><img loading="lazy" src="images/ice-creation-outils.jpg" alt="Commande"></picture><div class="project-overlay"><span class="project-view">Voir le détail</span></div></div>
-                    <div class="project-info">
-                        <span class="project-tag tag-ice">I.C.E Étiquettes</span>
-                        <h3>Commande Plaques & Création Outils</h3>
-                        <p>Application de commande de plaques, d'outils et de création de fiches techniques. Temps de commande réduit de plus de 10 minutes à moins de 2 minutes. 1 800+ formats référencés, aide à la décision sur développés / porte-clichés / cylindres par machine.</p>
-                        <ul class="skill-tags" style="margin-top:0.8rem"><li>24 onglets</li><li>10min → 2min</li><li>1 800+ formats</li><li>Fiche technique</li></ul>
-                    </div>
-                </div>
-            </div>
-
-            <h3 class="projects-subtitle" data-cat="imprimerie">Expertise imprimerie — I.C.E Étiquettes (1996-2024)</h3>
-            <div class="projects-grid">
-                <!-- Carte 1 : Référent AO -->
-                <div class="project-card">
-                    <div class="project-image-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14 2 14 8 20 8"/>
-                            <path d="M9 13l2 2 4-4"/>
-                            <line x1="9" y1="17" x2="15" y2="17"/>
-                        </svg>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag tag-ice">Imprimerie</span>
-                        <h3>Référent technique ~100 AO/an</h3>
-                        <p>Soutien aux commerciaux sur tous les appels d'offres techniques : étude de faisabilité, choix machine optimale, calcul matière et gâche selon nombre de couleurs, cadence, délais. Interlocuteur privilégié des commerciaux extérieurs et des clients sur les non-conformités.</p>
-                        <ul class="skill-tags" style="margin-top:0.8rem"><li>~100 AO/an</li><li>Faisabilité</li><li>Arbitrage technico-éco</li><li>Relation client</li></ul>
-                    </div>
-                </div>
-
-                <!-- Carte 2 : Triptyque colorimétrique -->
-                <div class="project-card">
-                    <div class="project-image-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="13.5" cy="6.5" r="2.5" fill="currentColor" opacity="0.6"/>
-                            <circle cx="17.5" cy="10.5" r="2.5" fill="currentColor" opacity="0.4"/>
-                            <circle cx="8.5" cy="7.5" r="2.5" fill="currentColor" opacity="0.8"/>
-                            <circle cx="6.5" cy="12.5" r="2.5" fill="currentColor" opacity="0.3"/>
-                            <path d="M12 2a10 10 0 1 0 10 10c0-1.1-.9-2-2-2h-3a2 2 0 0 1-2-2 2 2 0 0 0-2-2c-1.1 0-2-.9-2-2V2z"/>
-                        </svg>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag tag-ice">Imprimerie</span>
-                        <h3>Triptyque contrôle colorimétrique — Export USA</h3>
-                        <p>Identification de la dérive des échantillons papier dans le temps. Mise en place d'un contrôle spectrophotométrique avec relevés début/fin de bobine et traçabilité complète. Méthodologie déployée ensuite sur tous les dossiers sensibles.</p>
-                        <ul class="skill-tags" style="margin-top:0.8rem"><li>Spectrophotomètre</li><li>Tolérance zéro</li><li>Traçabilité</li><li>Export</li></ul>
-                    </div>
-                </div>
-
-                <!-- Carte 3 : Innovations techniques -->
-                <div class="project-card">
-                    <div class="project-image-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 18h6"/>
-                            <path d="M10 22h4"/>
-                            <path d="M12 2a7 7 0 0 0-4 12.7c.5.4.9.9 1.2 1.4.2.4.3.9.3 1.4v.5h5v-.5c0-.5.1-1 .3-1.4.3-.5.7-1 1.2-1.4A7 7 0 0 0 12 2z"/>
-                            <path d="M12 6v4" opacity="0.5"/>
-                            <circle cx="12" cy="11" r="1" fill="currentColor" opacity="0.8"/>
-                        </svg>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag tag-ice">Imprimerie</span>
-                        <h3>Innovations techniques atelier</h3>
-                        <p>Système d'expulsion à air comprimé pour découpes feuille à feuille avec trous — unique dans le groupe Canopeo (5 sites en France). Pose décalée des plaques de découpe pour doubler la vitesse de tirage tout en réduisant l'usure des outils. Système de pastilles couleur pour la gestion de plus de 1 800 plaques stockées.</p>
-                        <ul class="skill-tags" style="margin-top:0.8rem"><li>Innovation machine</li><li>Optimisation outillage</li><li>5S</li><li>Gestion stock</li></ul>
-                    </div>
-                </div>
-
-                <!-- Carte 4 : Réimplantation atelier -->
-                <div class="project-card">
-                    <div class="project-image-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M2 20v-8l6-3v4l6-4v11H2z"/>
-                            <path d="M14 20V9l8-4v15"/>
-                            <rect x="5" y="15" width="2" height="3" fill="currentColor" opacity="0.4"/>
-                            <rect x="10" y="14" width="2" height="4" fill="currentColor" opacity="0.4"/>
-                            <rect x="16" y="12" width="2" height="6" fill="currentColor" opacity="0.4"/>
-                        </svg>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-tag tag-ice">Imprimerie</span>
-                        <h3>Réimplantation atelier + maintenance autonome</h3>
-                        <p>Reconfiguration complète de l'atelier suite à l'intégration d'une nouvelle machine, pour optimiser les flux de production. Maintenance machine autonome : électronique, remplacement moteur servo, gestion complète des installations d'air comprimé, coordination des intervenants extérieurs (électriciens, etc.).</p>
-                        <ul class="skill-tags" style="margin-top:0.8rem"><li>Lean layout</li><li>Maintenance</li><li>Électronique</li><li>Gestion projet</li></ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recommandations -->
-    <section class="section section-dark" id="recommandations" aria-labelledby="reco-title">
-        <div class="container">
-            <h2 class="section-title" id="reco-title">Recommandations</h2>
-            <p class="section-subtitle">Ce qu'on dit de mon travail</p>
-            <p class="reco-intro">Une recommandation reçue à l'issue de ma mission en tant que Data Analyst chez A3D Design (Limoges).</p>
-
-            <article class="reco-card">
-                <header class="reco-header">
-                    <div class="reco-avatar" aria-hidden="true">LC</div>
-                    <div class="reco-ident">
-                        <h3>Ludivine CARON</h3>
-                        <p class="reco-role">Responsable Qualité — A3D Design</p>
-                        <p class="reco-context">Data Analyst · Oct. 2025 – Sept. 2026 · deux CDD, 7 mois</p>
-                    </div>
+        <!-- Études de cas -->
+        <section class="section" id="etudes" aria-labelledby="etudes-titre">
+            <div class="wrap">
+                <header class="sec-head">
+                    <p class="eyebrow">Études de cas</p>
+                    <h2 id="etudes-titre">Cinq problèmes réels, cinq domaines</h2>
+                    <p class="sec-lead">Chaque fois le même chemin : comprendre le métier, fiabiliser les données, livrer l'outil et former. Les démos utilisent des données fictives.</p>
                 </header>
 
-                <div class="reco-quotes">
-                    <blockquote class="reco-quote">
-                        <span class="reco-mark" aria-hidden="true">&ldquo;</span>
-                        Eric a su mobiliser des données jusque-là peu exploitées pour en faire de véritables leviers d'aide à la décision.
+                <article class="case">
+                    <div class="case-media">
+                        <picture><source srcset="images/app-treso.webp" type="image/webp"><img loading="lazy" src="images/app-treso.jpg" width="1200" height="750" alt="Application de suivi de trésorerie : tableau de bord (démo, données fictives)"></picture>
+                    </div>
+                    <div class="case-body">
+                        <p class="case-tag">Finance · ERP Conseil · 2026</p>
+                        <h3>Suivi de trésorerie : un Excel de 20 ans devenu une application</h3>
+                        <dl class="case-steps">
+                            <div><dt>Le problème</dt><dd>Un classeur de 20 ans (4 onglets, ~10 000 cellules) au cœur de la trésorerie d'une TPE industrielle : fragile, un seul utilisateur à la fois.</dd></div>
+                            <div><dt>Ce que j'ai fait</dt><dd>Une application multi-utilisateur : saisies guidées, indicateurs recalculés, export, sauvegarde en un clic, installée sur le serveur du client.</dd></div>
+                        </dl>
+                        <ul class="case-kpis" aria-label="Résultats"><li><span class="kpi-k">20 ans</span><span class="kpi-l">de classeur Excel remplacés</span></li><li><span class="kpi-k">350+</span><span class="kpi-l">tests : les mêmes chiffres que l'Excel</span></li><li><span class="kpi-k">09/2026</span><span class="kpi-l">en service chez le client</span></li></ul>
+                        <p class="case-links"><a class="link-arrow" href="https://tresorerie.apppreview.fr" target="_blank" rel="noopener">Voir la démo</a></p>
+                    </div>
+                </article>
+
+                <article class="case case-flip">
+                    <div class="case-media">
+                        <picture><source srcset="images/trame-rdd.webp" type="image/webp"><img loading="lazy" src="images/trame-rdd.jpg" width="1200" height="928" alt="Tableau de bord Power BI de revue de direction ISO 9001"></picture>
+                    </div>
+                    <div class="case-body">
+                        <p class="case-tag">Pilotage & qualité · A3D Design · 2025-2026</p>
+                        <h3>Revue de direction ISO 9001 et coût de revient</h3>
+                        <dl class="case-steps">
+                            <div><dt>Le problème</dt><dd>Les données de deux logiciels de gestion peu exploitées ; un coût de revient calculé à la main, 3 à 4 jours par mois ; une revue de direction notée « point critique » par l'auditeur.</dd></div>
+                            <div><dt>Ce que j'ai fait</dt><dd>Un tableau de bord de 56 pages (~430 indicateurs) sur un modèle de 40 tables ; un moteur de calcul du coût de revient sur ~40 centres de charge.</dd></div>
+                        </dl>
+                        <ul class="case-kpis" aria-label="Résultats"><li><span class="kpi-k">Point fort</span><span class="kpi-l">à l'audit ISO 9001 (point critique avant)</span></li><li><span class="kpi-k">3-4 j → s</span><span class="kpi-l">pour le calcul mensuel du coût de revient</span></li><li><span class="kpi-k">&lt; 3 %</span><span class="kpi-l">d'écart réel / standard (plus de 10 % avant)</span></li></ul>
+                        <p class="case-links"><a class="link-arrow" href="#recommandation">Lire la recommandation</a></p>
+                    </div>
+                </article>
+
+                <article class="case">
+                    <div class="case-media">
+                        <picture><source srcset="images/app-maintenance.webp" type="image/webp"><img loading="lazy" src="images/app-maintenance.jpg" width="1200" height="750" alt="Application Maintenance machines : tableau de bord des équipements (données fictives)"></picture>
+                    </div>
+                    <div class="case-body">
+                        <p class="case-tag">Maintenance · ERP Conseil · 2026</p>
+                        <h3>Maintenance machines : du tableau Excel à la traçabilité</h3>
+                        <dl class="case-steps">
+                            <div><dt>Le problème</dt><dd>Un Excel de suivi et un dossier par équipement : liens copiés à la main, initiales oubliées, aucune vue d'ensemble des machines pénalisantes.</dd></div>
+                            <div><dt>Ce que j'ai fait</dt><dd>Fiches de panne numérotées, liens vers les dossiers de l'équipement, traçabilité automatique (qui, quand, quoi), préventif avec alertes, import de l'Excel existant.</dd></div>
+                        </dl>
+                        <ul class="case-kpis" aria-label="Résultats"><li><span class="kpi-k">09/2026</span><span class="kpi-l">présentée chez le client</span></li><li><span class="kpi-k">0</span><span class="kpi-l">donnée qui sort de chez lui : installée sur son serveur</span></li></ul>
+                        <p class="case-links"><a class="link-arrow" href="https://maintenance.apppreview.fr" target="_blank" rel="noopener">Voir la démo</a></p>
+                    </div>
+                </article>
+
+                <article class="case case-flip">
+                    <div class="case-media">
+                        <picture><source srcset="images/app-fds-seirich.webp" type="image/webp"><img loading="lazy" src="images/app-fds-seirich.jpg" width="1200" height="750" alt="FDS → Seirich : écran Produits (démonstration, données fictives)"></picture>
+                    </div>
+                    <div class="case-body">
+                        <p class="case-tag">Qualité & sécurité · ERP Conseil · 2026</p>
+                        <h3>FDS → Seirich : les fiches de sécurité sous contrôle</h3>
+                        <dl class="case-steps">
+                            <div><dt>Le problème</dt><dd>Les fiches de données de sécurité arrivent des fournisseurs en PDF : il faut les rapprocher des composants, les ranger, tenir un suivi et alimenter Seirich (INRS).</dd></div>
+                            <div><dt>Ce que j'ai fait</dt><dd>Chaque fiche est lue, rapprochée de la liste des composants, renommée, rangée et tracée dans un registre ; le classeur d'import Seirich est produit automatiquement. Conçue avec une responsable qualité.</dd></div>
+                        </dl>
+                        <ul class="case-kpis" aria-label="Résultats"><li><span class="kpi-k">1 400+</span><span class="kpi-l">tests automatisés</span></li><li><span class="kpi-k">Fin 10/2026</span><span class="kpi-l">démonstration, en recette aujourd'hui</span></li></ul>
+                    </div>
+                </article>
+
+                <article class="case">
+                    <div class="case-media">
+                        <picture><source srcset="images/ice-reporting.webp" type="image/webp"><img loading="lazy" src="images/ice-reporting.jpg" width="1200" height="573" alt="Reporting mensuel de production : suivi des machines et des opérateurs"></picture>
+                    </div>
+                    <div class="case-body">
+                        <p class="case-tag">Production · ICE Étiquettes · 1996-2024</p>
+                        <h3>Un atelier piloté par la donnée, bien avant que le mot existe</h3>
+                        <dl class="case-steps">
+                            <div><dt>Le problème</dt><dd>Un atelier de 16 personnes en 3×8 à piloter au quotidien : délais, capacités machines, consommations, coûts.</dd></div>
+                            <div><dt>Ce que j'ai fait</dt><dd>Des outils construits dès 2001 : reporting mensuel de 27 onglets pour la direction, suivi des stocks, simulateur de temps de production, commande d'outillage ; référent technique des appels d'offres ; plan Lean validé et déployé.</dd></div>
+                        </dl>
+                        <ul class="case-kpis" aria-label="Résultats"><li><span class="kpi-k">−30 %</span><span class="kpi-l">de coûts de stock, déployé sur 5 sites</span></li><li><span class="kpi-k">10 → 2 min</span><span class="kpi-l">pour une commande d'outillage</span></li><li><span class="kpi-k">~100</span><span class="kpi-l">appels d'offres par an en appui commercial</span></li></ul>
+                    </div>
+                </article>
+
+                <details class="more">
+                    <summary>Autres réalisations <span class="more-n">(8)</span></summary>
+                    <ul class="more-list">
+                        <li><strong>Pilotage d'activité</strong> — classeur de pilotage porté vers une application : chiffre d'affaires, carnet de commandes, charge, retards, marges ; en service chez le client. <a href="https://demo.apppreview.fr" target="_blank" rel="noopener">Démo</a> (identifiants sur la page de connexion)</li>
+                        <li><strong>Espace Pro</strong> — gestion commerciale : devis et factures PDF, relances, bilan annuel, formulaires clients ; sans serveur ni abonnement.</li>
+                        <li><strong>FlexoSuite</strong> — application de chiffrage pour l'imprimerie, conçue à partir de 28 ans de métier ; en développement.</li>
+                        <li><strong>Retards de livraison</strong> — analyse Power BI : Pareto des causes, délais par chef de projet, performance par client.</li>
+                        <li><strong>Trésorerie Power BI</strong> — 5 comptes, 24 périodes bimensuelles, alimenté par des macros VBA.</li>
+                        <li><strong>Simulateur d'aide au chiffrage</strong> — temps de production et gâche selon la machine et la cadence, pour les appels d'offres.</li>
+                        <li><strong>Saisie de production et pointeuse</strong> — saisie par les opérateurs, étiquette de suivi entre les équipes.</li>
+                        <li><strong>Commande de plaques et d'outils</strong> — 1 800+ formats référencés, fiche technique générée.</li>
+                    </ul>
+                </details>
+            </div>
+        </section>
+
+        <!-- Recommandation -->
+        <section class="section" id="recommandation" aria-labelledby="reco-titre">
+            <div class="wrap">
+                <figure class="reco">
+                    <h2 class="sr-only" id="reco-titre">Recommandation</h2>
+                    <blockquote>
+                        <p>« Eric a su mobiliser des données jusque-là peu exploitées pour en faire de véritables leviers d'aide à la décision. Son intervention a permis d'améliorer significativement la fiabilité des données et la rapidité de notre pilotage Qualité et industriel. Je recommande Eric Paysant sans réserve. »</p>
                     </blockquote>
-                    <blockquote class="reco-quote">
-                        <span class="reco-mark" aria-hidden="true">&ldquo;</span>
-                        Son intervention a permis d'améliorer significativement la fiabilité des données et la rapidité de notre pilotage Qualité et industriel.
-                    </blockquote>
-                    <blockquote class="reco-quote">
-                        <span class="reco-mark" aria-hidden="true">&ldquo;</span>
-                        Je recommande Eric Paysant sans réserve.
-                    </blockquote>
+                    <figcaption>
+                        <span class="reco-avatar" aria-hidden="true">LC</span>
+                        <span><strong>Ludivine Caron</strong>, Responsable Qualité — A3D Design<br><span class="muted">Data Analyst · deux CDD, 7 mois</span></span>
+                        <a class="btn btn-ghost btn-sm" href="assets/docs/Lettre_Recommandation_Ludivine_Caron.pdf?v=20260826" target="_blank" rel="noopener noreferrer">Lire la lettre (PDF)</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Méthode -->
+        <section class="section section-alt" aria-labelledby="methode-titre">
+            <div class="wrap">
+                <header class="sec-head">
+                    <p class="eyebrow">Ma méthode</p>
+                    <h2 id="methode-titre">La même, quel que soit le domaine</h2>
+                </header>
+                <ol class="steps">
+                    <li><span class="step-n">1</span><h3>Comprendre le métier</h3><p>Je pars de ce que font les équipes : leurs fichiers, leurs habitudes, ce qui leur coûte du temps. Ce qui marche est conservé.</p></li>
+                    <li><span class="step-n">2</span><h3>Fiabiliser les données</h3><p>Rapprocher les sources, corriger les écarts, prouver les calculs : un indicateur n'a de valeur que si on peut le vérifier.</p></li>
+                    <li><span class="step-n">3</span><h3>Livrer l'outil et former</h3><p>Tableau de bord, calcul automatisé ou application : installé, documenté, pris en main par l'équipe jusqu'à ce qu'elle s'en serve seule.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Parcours -->
+        <section class="section" id="parcours" aria-labelledby="parcours-titre">
+            <div class="wrap">
+                <header class="sec-head">
+                    <p class="eyebrow">Parcours</p>
+                    <h2 id="parcours-titre">Du terrain à la donnée</h2>
+                </header>
+                <ol class="timeline">
+                    <li>
+                        <p class="tl-date">Depuis 2026</p>
+                        <div class="tl-card">
+                            <h3>Consultant indépendant — ERP Conseil</h3>
+                            <p class="tl-meta">Haute-Vienne · outils de gestion pour TPE et PME</p>
+                            <p>Quatre applications en un an : trésorerie, pilotage d'activité, maintenance machines, fiches de sécurité (FDS → Seirich).</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tl-date">2025 – 2026</p>
+                        <div class="tl-card">
+                            <h3>Data Analyst — A3D Design</h3>
+                            <p class="tl-meta">Feytiat (87) · deux CDD, 7 mois · PME industrielle</p>
+                            <p>Revue de direction ISO 9001 (point critique → point fort), coût de revient automatisé, deux outils métier portés en applications. Lettre de recommandation « sans réserve ».</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tl-date">2024 – 2026</p>
+                        <div class="tl-card">
+                            <h3>Formations data</h3>
+                            <p class="tl-meta">DataScientest · DAWAN · Udemy</p>
+                            <p>Certification SQL, formation Power BI, Tosa Python 3, initiation à la supply chain.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tl-date">1996 – 2024</p>
+                        <div class="tl-card">
+                            <h3>Responsable d'atelier — ICE Étiquettes</h3>
+                            <p class="tl-meta">Limoges (87) · CDI, 28 ans · PME industrielle de 20 personnes</p>
+                            <p>Conducteur de machine, chef d'équipe dès 2001, responsable d'atelier de 2014 à 2024 : 16 personnes en 3×8, planification quotidienne, référent technique des appels d'offres, plan Lean.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Compétences -->
+        <section class="section section-alt" id="competences" aria-labelledby="comp-titre">
+            <div class="wrap">
+                <header class="sec-head">
+                    <p class="eyebrow">Compétences</p>
+                    <h2 id="comp-titre">Terrain, données et outils</h2>
+                </header>
+                <ul class="skills">
+                    <li class="skill skill-wide"><h3>Adaptation rapide</h3><p>Finance, pilotage, maintenance, qualité, production : un nouveau métier pris en main en quelques semaines.</p></li>
+                    <li class="skill"><h3>Pilotage & organisation</h3><ul class="tags"><li>Indicateurs</li><li>Planification</li><li>Ordonnancement</li><li>Management d'équipe</li></ul></li>
+                    <li class="skill"><h3>Données & reporting</h3><ul class="tags"><li>Power BI · DAX</li><li>SQL</li><li>Python</li><li>Modélisation</li></ul></li>
+                    <li class="skill"><h3>Gestion & performance</h3><ul class="tags"><li>Coût de revient</li><li>Rentabilité</li><li>Stocks</li><li>Chiffrage</li></ul></li>
+                    <li class="skill"><h3>Qualité & amélioration</h3><ul class="tags"><li>ISO 9001</li><li>Traçabilité</li><li>Lean · 5S</li><li>Six Sigma Yellow Belt</li></ul></li>
+                    <li class="skill"><h3>Outils sur mesure</h3><ul class="tags"><li>Excel expert · VBA</li><li>Applications web</li><li>Automatisation</li><li>ERP : Solune, Qualishare, CERM, Cégid</li></ul></li>
+                </ul>
+                <p class="certs"><strong>Certifications :</strong> SQL — DataScientest (2024-25) · Power BI — DataScientest (2024-25) · Tosa Python 3 — DAWAN (2025) · Initiation Supply Chain — Udemy (2026) · Lean Six Sigma Yellow Belt (2020)</p>
+            </div>
+        </section>
+
+
+        <!-- Contact -->
+        <section class="section section-alt" id="contact" aria-labelledby="contact-titre">
+            <div class="wrap contact">
+                <div class="contact-copy">
+                    <p class="eyebrow">Contact</p>
+                    <h2 id="contact-titre">Parlons de votre besoin</h2>
+                    <p class="sec-lead">Un poste en production, en pilotage, en qualité ou en données, en CDI, CDD ou mission : écrivez-moi directement.</p>
+                    <ul class="contact-list">
+                        <li><span>E-mail</span><a href="mailto:eric@ericpaysant.fr">eric@ericpaysant.fr</a></li>
+                        <li><span>Téléphone</span><a href="tel:+33621849054">06 21 84 90 54</a></li>
+                        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/ericpaysant" target="_blank" rel="noopener">linkedin.com/in/ericpaysant</a></li>
+                        <li><span>Lieu</span>Condat-sur-Vienne (87), près de Limoges</li>
+                    </ul>
+                    <div class="hero-actions">
+                        <a href="CV_Eric_Paysant.pdf?v=20261013" target="_blank" rel="noopener" class="btn btn-primary">Télécharger mon CV</a>
+                        <a href="profil-freelance.pdf?v=20261013b" target="_blank" rel="noopener" class="btn btn-ghost">Profil freelance</a>
+                    </div>
                 </div>
-
-                <footer class="reco-footer">
-                    <a href="assets/docs/Lettre_Recommandation_Ludivine_Caron.pdf?v=20260826"
-                       target="_blank" rel="noopener noreferrer"
-                       class="btn btn-primary"
-                       aria-label="Télécharger la lettre de recommandation complète au format PDF">
-                        📄 Lire la lettre complète
-                    </a>
-                </footer>
-            </article>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section section-dark" id="contact">
-        <div class="container">
-            <h2 class="section-title">Me proposer un poste</h2>
-            <p class="section-subtitle">Un poste en production, en pilotage, en qualité ou en données ? Contactez-moi directement.</p>
-            <div class="contact-layout">
-                <form class="contact-form" action="https://formspree.io/f/xqegjwoy" method="POST" id="contactForm">
-                    <input type="text" name="_gotcha" style="display:none">
+                <form class="form" action="https://formspree.io/f/xqegjwoy" method="POST">
+                    <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <div class="form-row">
-                        <div class="form-group"><label for="name">Nom</label><input type="text" id="name" name="name" placeholder="Votre nom" required></div>
-                        <div class="form-group"><label for="company">Entreprise</label><input type="text" id="company" name="company" placeholder="Nom de l'entreprise"></div>
+                        <label>Nom<input type="text" name="name" autocomplete="name" required></label>
+                        <label>Entreprise<input type="text" name="company" autocomplete="organization"></label>
                     </div>
                     <div class="form-row">
-                        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="votre@email.com" required></div>
-                        <div class="form-group"><label for="phone">Téléphone</label><input type="tel" id="phone" name="phone" placeholder="06 ..."></div>
+                        <label>E-mail<input type="email" name="email" autocomplete="email" required></label>
+                        <label>Téléphone<input type="tel" name="phone" autocomplete="tel"></label>
                     </div>
-                    <div class="form-group">
-                        <label for="contract">Type de poste</label>
-                        <select id="contract" name="contract">
-                            <option value="">Choisir...</option>
+                    <label>Type de poste
+                        <select name="contract">
+                            <option value="">Choisir…</option>
                             <option value="cdi">CDI</option>
                             <option value="cdd">CDD</option>
                             <option value="interim">Intérim</option>
                             <option value="mission">Mission / indépendant</option>
                         </select>
-                    </div>
-                    <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Décrivez le poste..." required></textarea></div>
+                    </label>
+                    <label>Message<textarea name="message" rows="5" required placeholder="Le poste, l'équipe, le contexte…"></textarea></label>
                     <button type="submit" class="btn btn-primary btn-full">Envoyer</button>
                 </form>
-                <div class="contact-info">
-                    <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><h4>Email</h4><p>eric@ericpaysant.fr</p></div></div>
-                    <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h4>Téléphone</h4><p>06 21 84 90 54</p></div></div>
-                    <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h4>Localisation</h4><p>Condat-sur-Vienne (87)</p></div></div>
-                    <div class="contact-card"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div><div><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/ericpaysant" target="_blank" rel="noopener" style="color:var(--accent-1)">linkedin.com/in/ericpaysant</a></div></div>
-                    <a href="CV_Eric_Paysant.pdf?v=20261013" target="_blank" class="btn btn-primary btn-full" style="margin-top:1rem">Télécharger mon CV (PDF)</a>
-                    <a href="profil-freelance.pdf?v=20261013b" target="_blank" class="btn btn-outline btn-full" style="margin-top:0.6rem">Profil freelance (PDF)</a>
-                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <!-- Avis -->
-    <section class="section" id="avis">
-        <div class="container">
-            <h2 class="section-title">Avis & Témoignages</h2>
-            <p class="section-subtitle">Ce que pensent les visiteurs de ce portfolio</p>
-
-            <div class="avis-layout">
-                <div class="rating-box" id="ratingBox">
-                    <div class="rating-display">
-                        <span class="rating-avg" id="ratingAvg">-</span>
-                        <span class="rating-avg-label">/ 5</span>
-                        <span class="rating-count" id="ratingCount">(0 avis)</span>
-                    </div>
-                    <div class="rating-stars" id="ratingStars">
-                        <span class="star" data-value="1">&#9733;</span>
-                        <span class="star" data-value="2">&#9733;</span>
-                        <span class="star" data-value="3">&#9733;</span>
-                        <span class="star" data-value="4">&#9733;</span>
-                        <span class="star" data-value="5">&#9733;</span>
-                    </div>
-                    <div class="avis-form" id="avisForm">
-                        <input type="text" id="avisNom" class="avis-input" placeholder="Votre nom (facultatif)" maxlength="50">
-                        <textarea id="avisCommentaire" class="avis-textarea" placeholder="Votre commentaire..." maxlength="300" rows="3"></textarea>
-                        <button class="btn btn-primary btn-full" id="avisSubmit" disabled>Laisser mon avis</button>
-                    </div>
-                    <p class="rating-message" id="ratingMessage"></p>
-                </div>
-
-                <div class="avis-list" id="avisList">
-                    <h3 class="avis-list-title">Derniers avis</h3>
-                    <div class="avis-items" id="avisItems">
-                        <p class="avis-empty">Aucun avis pour le moment. Soyez le premier !</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-logo">EP<span class="dot">.</span></p>
-                <p>&copy; 2026 Eric Paysant | Organisation, données &amp; outils de gestion</p>
-            </div>
+        <div class="wrap footer-in">
+            <p><span class="logo">EP<span>.</span></span> © <span id="annee">2026</span> Eric Paysant · Organisation, données & outils de gestion</p>
+            <p><a href="#accueil">Haut de page ↑</a></p>
         </div>
     </footer>
 
-    <!-- Modal -->
-    <div class="modal-overlay" id="projectModal">
-        <div class="modal">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <div class="modal-image"><img id="modalImg" src="" alt=""></div>
-            <div class="modal-content">
-                <span class="modal-tag" id="modalTag"></span>
-                <h2 id="modalTitle"></h2>
-                <p id="modalDesc"></p>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js?v=20260826b"></script>
+    <script src="script.js?v=20261013d"></script>
 </body>
 </html>
