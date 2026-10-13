@@ -31,14 +31,17 @@ Conséquence sur le CSS, à ne pas inverser par mégarde : **le clair est défin
 garantit qu'aucun chemin ne produit de flash sombre — même script d'amorçage coupé.
 Le `<meta name="theme-color">` suit la couleur claire.
 
-## Structure
+## Structure (refonte du 13/10/2026)
 
-- `index.html` — page unique. Sections : hero, applications web, profil, parcours,
-  compétences, réalisations (filtrées), recommandations, contact.
-- `style.css` — variables de thème dans `:root`, thème clair sous `:root[data-theme="light"]`.
-  Le thème initial est posé par un script inline **dans le `<head>`** pour éviter le flash.
-- `script.js` — modal « Voir le détail », révélation au scroll (`IntersectionObserver`),
-  compteurs, bascule de thème, filtres de projets.
+- `index.html` — page unique, lisible en diagonale : accueil (CV en premier bouton), « En bref » (grille
+  de chiffres clés), **5 études de cas** (problème → ce que j'ai fait → résultat chiffré, une par domaine :
+  finance, pilotage & qualité, maintenance, qualité & sécurité, production) + « Autres réalisations »
+  repliées, méthode en 3 étapes, parcours, compétences, recommandation, contact (Formspree).
+  Plus d'accordéon, de modale, ni de bloc « avis des visiteurs » (retirés le 13/10/2026).
+- `style.css` — jetons de thème dans `:root` (clair), surcharge `:root[data-theme="dark"]` ; cibles
+  tactiles ≥ 44 px ; trois paliers (1024, 900, 640 px).
+- `script.js` — barre de navigation, menu repliable, bascule de thème, apparition au défilement
+  (coupée si « mouvement réduit »), année du pied de page. Aucune dépendance.
 - `images/` — chaque visuel existe en `.jpg` **et** `.webp` ; le HTML sert le WebP via
   `<picture>` avec repli JPEG. Ajouter les deux formats pour toute nouvelle image.
 
