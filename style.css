@@ -150,7 +150,8 @@ strong { font-weight: 600; }
 .case-result { margin-top: 18px; padding: 14px 16px; border-radius: var(--radius-sm); background: var(--accent-soft); color: var(--ink); font-size: 16px; }
 .case-result strong { color: var(--accent-strong); }
 :root[data-theme="dark"] .case-result strong { color: var(--accent); }
-.case-links { margin-top: 8px; }
+.case-links { margin-top: 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; }
+.case-note { font-size: 14px; color: var(--muted); }
 .case-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 18px; }
 .case-kpis li { background: var(--accent-soft); border-radius: var(--radius-sm); padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; }
 .kpi-k { font-size: 22px; font-weight: 800; letter-spacing: -.02em; color: var(--accent-strong); font-variant-numeric: tabular-nums; line-height: 1.2; }

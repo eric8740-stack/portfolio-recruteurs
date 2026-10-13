@@ -34,8 +34,8 @@ Le `<meta name="theme-color">` suit la couleur claire.
 ## Structure (refonte du 13/10/2026)
 
 - `index.html` — page unique, lisible en diagonale : accueil (CV en premier bouton), « En bref » (grille
-  de chiffres clés), **5 études de cas** (problème → ce que j'ai fait → résultat chiffré, une par domaine :
-  finance, pilotage & qualité, maintenance, qualité & sécurité, production) + « Autres réalisations »
+  de chiffres clés), **6 études de cas** (problème → ce que j'ai fait → résultat chiffré, une par domaine :
+  finance, pilotage, direction & coûts, maintenance, qualité & sécurité, production) + « Autres réalisations »
   repliées, recommandation, méthode en 3 étapes, parcours, compétences, contact (Formspree).
   Choix tirés de la récolte du 13/10/2026 (claude-config, `linkedin/recolte-portfolio-2026-10/`).
   Plus d'accordéon, de modale, ni de bloc « avis des visiteurs » (retirés le 13/10/2026).
