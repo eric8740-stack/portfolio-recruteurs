@@ -6,7 +6,7 @@ Compte GitHub : **eric8740-stack** (skill `git-comptes`).
 
 ## ⚠️ Cache-buster obligatoire — `?v=AAAAMMJJ`
 
-`style.css`, `script.js` et les PDF de CV sont liés avec un paramètre `?v=`.
+`style.css`, `script.js` et le PDF du profil freelance sont liés avec un paramètre `?v=`.
 **Il faut l'incrémenter à chaque modification du fichier concerné**, sur *toutes* ses
 occurrences dans `index.html`.
 
@@ -33,7 +33,7 @@ Le `<meta name="theme-color">` suit la couleur claire.
 
 ## Structure (refonte du 13/10/2026)
 
-- `index.html` — page unique, lisible en diagonale : accueil (CV en premier bouton), « En bref » (grille
+- `index.html` — page unique, lisible en diagonale : accueil (profil freelance en premier bouton ; **plus de CV sur le site depuis le 07/11/2026**, posture d'indépendant), « En bref » (grille
   de chiffres clés), **6 études de cas** (problème → ce que j'ai fait → résultat chiffré, une par domaine :
   finance, pilotage, direction & coûts, maintenance, qualité & sécurité, production) + « Autres réalisations »
   repliées, recommandation, méthode en 3 étapes, parcours, compétences, contact (Formspree).
